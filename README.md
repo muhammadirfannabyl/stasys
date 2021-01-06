@@ -1,0 +1,5 @@
+# stasys
+STASYS (Student Activity System)
+The purpose of this report is to introduce the Student Activity System (STASYS). This system is a web based application system. The system will be developed and applied to all students in UiTM Samarahan Campus 2 that is responsible to manage all the activities proposed by students. Thus, it will use UiTM server as its database platform. This system will take over the conventional system from manual to electronic system. STASYS can make standardization for the event that has been created by students.
+
+The user only has to follow the flow of the system during creating an event. All the data inserted by users will be saved in the database. Therefore, it will eliminate the problem of losing and redundancy of data. Besides that, the system will help in editing existing events or delete cancelled events that are stored within the database of the website. In addition,users also can easily find the required information for a certain event quickly based on the date of event created.
