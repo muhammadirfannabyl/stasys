@@ -11,7 +11,7 @@ if(isset($_POST['Submit']))
 
 
     //query to find user
-    $sql = "SELECT * FROM user WHERE username = '$un' AND password = '$pw'";
+    $sql = "SELECT * FROM user WHERE un = '$un' AND pw = '$pw'";
     $query = $conn->query($sql);
     $row=$query->fetch_assoc();
 
