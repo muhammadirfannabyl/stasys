@@ -15,8 +15,7 @@
 		$date=$_POST['date'];
 		$time=$_POST['time'];
 		$quota=$_POST['quota'];
-		$date->setTime($time->format('H'), $time->format('i'), $time->format('s'));
-		$datetime =  $date->format('Y-m-d H:i:s');
+		$datetime =  date('Y-m-d H:i:s', strtotime("$date $time"));
 		$sql="INSERT INTO event (name, desc, when, quota, u_id) VALUES ('{$name}', '{$desc}', '{$datetime}', '{$quota}', '{$uid}')";
 
 		$result=mysqli_query($conn,$sql);
