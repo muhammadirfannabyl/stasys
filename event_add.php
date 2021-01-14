@@ -73,5 +73,6 @@
 				<button type="submit">Submit</button><a href="home.php"><input type="button" value="Cancel"/></a>
 			</form>
 		<nav>
+		<script src="https://kit.fontawesome.com/2ba9e2652f.js" crossorigin="anonymous"></script>
 	</body>
 </html>
