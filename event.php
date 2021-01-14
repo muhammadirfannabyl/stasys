@@ -10,30 +10,6 @@
 ?>
 <html>
 	<head><title>STASYS - Add Event</title>
-	<style>
-	*{
-		background-color: #ffffff00;
-		box-sizing: border-box;
-		font-family: 'Arial';
-		margin-left: 0;
-		margin-right: 0;
-		margin-top: 0;
-		scroll-behavior: smooth;
-	}nav a{
-		color: darkgreen;
-		text-decoration: none;
-	}.align-center{
-		width: 50%;
-		margin: auto;
-	}.box-event{
-		background-color: lightgray;
-		padding: 20px 10px 20px 10px;
-		margin: 20px auto 20px auto;
-		width: 960px;
-	}.vis{
-		border: 2px dashed red;
-	}
-	</style>
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	</head>
 	<body>
