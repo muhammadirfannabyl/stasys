@@ -9,4 +9,7 @@
 }nav a{
 	color: darkgreen;
 	text-decoration: none;
+}.align-center{
+	width: 50%;
+	margin: auto;
 }
