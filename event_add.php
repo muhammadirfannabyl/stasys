@@ -30,6 +30,7 @@
 			echo '
 			<script>
 				alert("Cannot add entry into the database.");
+				window.location = "event.php";
 			</script>
 			';
 		}
