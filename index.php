@@ -11,7 +11,7 @@
         <form name="form1" method="post" action="login.php">
         <table>
         <tr>
-        <td>User Name</td>
+        <td>Username</td>
         <td><input type="text" placeholder="Username" name="username" /></td>
         </tr>
         <tr>
