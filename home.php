@@ -47,11 +47,11 @@
 			<a href="logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Log Out</a>
 		</nav>
 		<!--List existing events from Database-->
+		<div>
+			<h1>Events</h1>
 			<div class="box-event align-center">
 				ADD EVENT
 			</div>
-		<div>
-			<h1>Events</h1>
 		<?php
 			$result = mysqli_query($conn, "SELECT * FROM event ORDER BY id DESC");
 			while($rows=mysqli_fetch_array($result)){ ?>
