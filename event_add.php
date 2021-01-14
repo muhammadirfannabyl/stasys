@@ -13,18 +13,24 @@
 		$desc=$_POST['desc'];
 		$date=$_POST['date'];
 		$quota=$_POST['quota'];
-		$datetime=date("Y/m/d H:i:s");
 		$sql="INSERT INTO event (name, desc, when, quota, u_id) VALUES ('{$name}', '{$desc}', '{$date}', '{$quota}', '{$_SESSION['id']}')";
 
 		$result=mysqli_query($conn,$sql);
 
 		if($result){
-			echo
-			'Event has been successfully added to database.<br/>
-			<a href="home.php">Home</a>
+			echo '
+			<script>
+				alent("Entry has been added into the database.");
+				window.location = "home.php";
+			</script>
 			';
 		}
-		else
-			echo 'Event cannot be added due to entry error.';
+		else{
+			echo '
+			<script>
+				alent("Cannot add entry into the database.");
+			</script>
+			';
+		}
 	}
 ?>
