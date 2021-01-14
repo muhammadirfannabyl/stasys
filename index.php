@@ -9,7 +9,7 @@
                 <tr><td>Username: </td><td><input type="text"></td></tr>
                 <tr><td>Password: </td><td><input type="text"></td></tr>
             </table>
-            <button type="submit">Log In</button>
+            <button type="submit">Log In</button><input type="button" name="register" value="Register"/>
         </form>
     </body>
 </html>
