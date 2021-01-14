@@ -29,7 +29,7 @@
                 <td></td>
                 <td>
                 <br><button type="submit" name="Submit" ><strong>Login</strong></button>
-                &nbsp;<a href="register.php><button type="submit" name="register" ><strong>Register</strong></button></a>
+                &nbsp;<button type="register" formaction="/register.php"><strong>Register</strong></button>
                 </td>
             </tr>
             </table></br></br>
