@@ -38,25 +38,25 @@
 		<!--List existing events from Database-->
 		<div>
 			<h1>Events</h1>
-			<div class="box-event vis">
+			<div class="box-event">
 				<b>Partyyy</b><br/><br/>
 				26/02/2021<br/><br/>
 				0/150 Joined
 				<input type="button" style="float: right" value="View"/>
 			</div>
-			<div class="box-event vis">
+			<div class="box-event">
 				<b>Semester Break Dinner</b><br/><br/>
 				25/01/2021<br/><br/>
 				-FULL-
 				<input type="button" style="float: right" value="View"/>
 			</div>
-			<div class="box-event vis">
+			<div class="box-event">
 				<b>Semester Break Camp</b><br/><br/>
 				25/01/2021<br/><br/>
 				0/50 Joined
 				<input type="button" style="float: right" value="View"/>
 			</div>
-			<div class="box-event vis">
+			<div class="box-event">
 				<b>MAT263 Assessment 2</b><br/><br/>
 				15/01/2021<br/><br/>
 				0/30 Joined
