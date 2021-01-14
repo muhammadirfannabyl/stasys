@@ -80,14 +80,14 @@
 		<?php
 			$result = mysqli_query($conn, "SELECT * FROM event ORDER BY id DESC");
 			while($rows=mysqli_fetch_array($result)){ ?>
-			<div class="box-event">
+	<div class="box-event">
 				<b><?php echo $rows['name']; ?></b><br/><br/>
 				 echo $rows['date']; <br/><br/>
 				0/30 Joined
 				<input type="button" style="float: right" value="View"/>
 			</div>
 		<?php } ?>
-		</div>
+</div>
 		<script src="https://kit.fontawesome.com/2ba9e2652f.js" crossorigin="anonymous"></script>
 	</body>
 </html>
