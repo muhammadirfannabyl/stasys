@@ -25,7 +25,8 @@ if(isset($_POST['Submit']))
 	}
 	else
 	{
-		print 'setTimeout(function(){alert(\'The username or password is incorrect!\');}, 100)';
+		echo "<script src='js/sweetalert.min.js'></script>";
+	    	echo "<script>setTimeout(function(){ swal({title: 'Sila guna username / Password yang betul untuk log masuk!', 
 	}
 }
 else if(isset($_POST['register']))
