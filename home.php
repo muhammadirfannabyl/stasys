@@ -46,35 +46,10 @@
 			<a href="event_page.php"><i class="fa fa-calendar" aria-hidden="true"></i> Events</a>
 			<a href="logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Log Out</a>
 		</nav>
-		<!--List existing events from Database>
-		<div>
-			<h1>Events</h1>
-			<div class="box-event">
-				<b>Partyyy</b><br/><br/>
-				26/02/2021<br/><br/>
-				0/150 Joined
-				<input type="button" style="float: right" value="View"/>
+		<!--List existing events from Database-->
+			<div class="box-event align-center">
+				ADD EVENT
 			</div>
-			<div class="box-event">
-				<b>Semester Break Dinner</b><br/><br/>
-				25/01/2021<br/><br/>
-				-FULL-
-				<input type="button" style="float: right" value="View"/>
-			</div>
-			<div class="box-event">
-				<b>Semester Break Camp</b><br/><br/>
-				25/01/2021<br/><br/>
-				0/50 Joined
-				<input type="button" style="float: right" value="View"/>
-			</div>
-			<div class="box-event">
-				<b>MAT263 Assessment 2</b><br/><br/>
-				15/01/2021<br/><br/>
-				0/30 Joined
-				<input type="button" style="float: right" value="View"/>
-			</div>
-		</div>
-		<List existing events from Database-->
 		<div>
 			<h1>Events</h1>
 		<?php
