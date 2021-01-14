@@ -45,8 +45,8 @@
 			<a href="logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Log Out</a>
 		</nav>
 		<nav>
-			<form>
-				<table name="addevent" method="post" action="event_add.php">
+			<form name="addevent" method="post" action="event_add.php">
+				<table>
 					<tr><td>Name</td><td>: <input name="name" type="text"/></tr>
 					<tr><td>Description</td><td>: <input name="desc" type="text"/></tr>
 					<tr><td>Date and Time</td><td>: <input name="date" type="datetime-local"/>
