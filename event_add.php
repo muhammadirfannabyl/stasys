@@ -34,4 +34,11 @@
 			';
 		}
 	}
+	else{
+		echo '
+		<script>
+			alert("Sum thing is wong here.");
+		</script>
+		';
+	}
 ?>
