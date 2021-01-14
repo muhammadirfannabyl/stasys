@@ -6,21 +6,36 @@
 
             <div class="form-group">
                 <label for="lname">User Name:</label>
-                <input type="text" class="form-control" name="username" id="username" required="required" maxlength="80">
+                <input type="text" class="form-control" name="username" id="username" required="required" maxlength="50">
+            </div>
+            <div class="form-group">
+                <label for="lname">Name:</label>
+                <input type="text" class="form-control" name="username" id="username" required="required" maxlength="50">
             </div>
             <div class="form-group">
                 <label for="email">Email address:</label>
-                <input type="email" class="form-control" name="email" id="email" required="required" maxlength="80">
+                <input type="email" class="form-control" name="email" id="email" required="required" maxlength="50">
             </div>
             <div class="form-group">
                 <label for="password">Password:</label>
-                <input type="password" class="form-control" name="password" id="password" required="required" maxlength="80">
+                <input type="password" class="form-control" name="password" id="password" required="required" maxlength="50">
             </div>
             <div class="form-group">
                 <label for="pwd">Confirm Password:</label>
                 <input type="password" class="form-control" name="confirmpassword" id="confirmpassword" onkeyup='' required="required" maxlength="80">
             </div>
-
+            <div class="form-group">
+                <label for="lname">Student ID:</label>
+                <input type="text" class="form-control" name="username" id="username" required="required" maxlength="50">
+            </div>
+            <div class="form-group">
+                <label for="lname">Program:</label>
+                <input type="text" class="form-control" name="username" id="username" required="required" maxlength="50">
+            </div>
+            <div class="form-group">
+                <label for="lname">Part:</label>
+                <input type="text" class="form-control" name="username" id="username" required="required" maxlength="50">
+            </div>
             <button type="submit" name="btnsignup" class="btn btn-default">Submit</button>
         </form>
     </body>
