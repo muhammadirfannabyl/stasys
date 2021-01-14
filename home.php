@@ -53,9 +53,9 @@
 			$result = mysqli_query($conn, "SELECT * FROM event ORDER BY id DESC");
 			while($rows=mysqli_fetch_array($result)){ ?>
 	<div class="box-event">
-				<b><?php echo $rows['name']; ?></b><br/><br/>
-				<? echo $rows['when']; ?><br/><br/>
-				0/30 Joined
+				<b><?php echo $rows['title']; ?></b><br/><br/>
+				<? echo $rows['date_time']; ?><br/><br/>
+				0/<? echo $rows['quota']; ?>Joined
 				<input type="button" style="float: right" value="View"/>
 			</div>
 		<?php } ?>
