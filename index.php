@@ -7,8 +7,7 @@
 <html>
     <head><title>STASYS - Login</title></head>
     <body>
-        <h1>STASYS</h1>
-        <p>Login</p>
+        <h1>STASYS - LOGIN</h1>
         <form name="form1" method="post" action="login.php">
         <table>
         <tr>
