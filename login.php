@@ -28,8 +28,12 @@ if(isset($_POST['Submit']))
 		print 'setTimeout(function(){alert(\'The username or password is incorrect!\');}, 100)';
 	}
 }
-else if(isset($_POST['register']))
-{
-	header('location: register.php');
+else if(isset($_POST['register'])){
+	echo '
+		<script>
+			alert("Incorrect username or password! Please try again.");
+			window.location = "index.php";
+		</script>
+	';
 }
 ?>
