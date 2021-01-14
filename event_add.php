@@ -23,7 +23,7 @@
 		if($result){
 			echo '
 			<script>
-				alert("'.$datetime.' Entry has been added into the database.");
+				alert("SUCCESS: '.$title.', '.$info.', '.$date.', '.$time.', '.$date_time.', '.$quota.' ");
 				window.location = "home.php";
 			</script>
 			';
@@ -31,7 +31,7 @@
 		else{
 			echo '
 			<script>
-				alert("'.$datetime.' Cannot add entry into the database.\nError: '.$name.', '.$desc.', '.$date.', '.$time.', '.$datetime.', '.$quota.' ");
+				alert("FAIL: '.$title.', '.$info.', '.$date.', '.$time.', '.$date_time.', '.$quota.' ");
 				window.location = "event.php";
 			</script>
 			';
