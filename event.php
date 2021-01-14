@@ -10,7 +10,7 @@
 ?>
 <html>
 	<head><title>STASYS - Add Event</title>
-	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="stylesheet" type="text/css" href="/styles.css">
 	</head>
 	<body>
 		<!--Navigation bar-->
