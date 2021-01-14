@@ -53,6 +53,7 @@
 		border: 2px dashed red;
 	}
 	</style>
+	<link rel="stylesheet" type="text/css" href="styles.css">
 	</head>
 	<body>
 		<!--Navigation bar-->
