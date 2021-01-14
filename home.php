@@ -7,7 +7,7 @@
 	$sqluser = "SELECT * FROM user WHERE id ='".$_SESSION['id']."'";
 	$query_user = $conn->query($sqluser);
 	
-	rowuser = $query_user->fetch_assoc();
+	$rowuser = $query_user->fetch_assoc();
 ?>
 <html>
 	<style>
