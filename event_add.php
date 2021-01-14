@@ -8,7 +8,7 @@
 	$query_user = $conn->query($sqluser);
 	$rowuser = $query_user->fetch_assoc();
 	
-	if(isset($_POST['Submit'])){
+	if(isset($_POST['addevent'])){
 		$name=$_POST['name'];
 		$desc=$_POST['desc'];
 		$date=$_POST['date'];
