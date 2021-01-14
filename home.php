@@ -55,7 +55,7 @@
 	<div class="box-event">
 				<b><?php echo $rows['title']; ?></b><br/><br/>
 				<? echo $rows['date_time']; ?><br/><br/>
-				0/<? echo $rows['quota']; ?>Joined
+				0/<? echo $rows['quota']; ?> joined
 				<input type="button" style="float: right" value="View"/>
 			</div>
 		<?php } ?>
