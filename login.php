@@ -7,7 +7,6 @@
 		$un = mysqli_real_escape_string($conn, $_POST['username']);
 		$pw = mysqli_real_escape_string($conn, $_POST['password']);
 
-
 		//query to find user
 		$sql = "SELECT * FROM user WHERE un = '$un' AND pw = '$pw'";
 		$query = $conn->query($sql);

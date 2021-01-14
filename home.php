@@ -46,7 +46,7 @@
 			<a href="event_page.php"><i class="fa fa-calendar" aria-hidden="true"></i> Events</a>
 			<a href="logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Log Out</a>
 		</nav>
-		<!--List existing events from Database-->
+		<!--List existing events from Database>
 		<div>
 			<h1>Events</h1>
 			<div class="box-event">
@@ -74,7 +74,20 @@
 				<input type="button" style="float: right" value="View"/>
 			</div>
 		</div>
-		
+		<List existing events from Database-->
+		<div>
+			<h1>Events</h1>
+		<?php
+			$result = mysqli_query($conn, "SELECT * FROM event ORDER BY id DESC");
+			while($rows=mysqli_fetch_array($result)){ ?>
+			<div class="box-event">
+				<b><?php echo $rows['name']; ?></b><br/><br/>
+				 echo $rows['date']; <br/><br/>
+				0/30 Joined
+				<input type="button" style="float: right" value="View"/>
+			</div>
+		<?php } ?>
+		</div>
 		<script src="https://kit.fontawesome.com/2ba9e2652f.js" crossorigin="anonymous"></script>
 	</body>
 </html>
