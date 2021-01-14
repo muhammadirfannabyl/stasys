@@ -4,36 +4,60 @@
 	require_once 'session_check.php';
 	
 	//fetch info for current  user
-	$sqluser = "SELECT * FROM user WHERE id ='".$_SESSION['id']."'";
-	$query_user = $conn->query($sqluser);
+	$query_user = $conn->query("SELECT * FROM user WHERE id ='".$_SESSION['id']."'");
 	$rowuser = $query_user->fetch_assoc();
+	
+	// Get Event ID from previous button
+	if (isset($_GET["no"])){
+		$query_event = $conn->query("SELECT * FROM event WHERE id =".$_GET["no"]."");
+		$rowevent = $query_event->fetch_assoc();
+	}
+	
+	$query_org = $conn->query("SELECT * FROM user WHERE id = ".$rowevent['u_id']."");
+	$roworg = $query_org->fetch_assoc();
+	$count = mysqli_fetch_assoc(mysqli_query($conn, "SELECT COUNT(u_id) as count FROM participation WHERE e_id = ".$rowevent["id"].""));
 ?>
 <html>
 	<head>
-		<title>STASYS - Add Event</title>
+		<title>STASYS - Event: <?php echo $rowevent['title']; ?></title>
 		<link rel="stylesheet" type="text/css" href="./styles.css"/>
 	</head>
 	<body>
 		<!--Navigation bar-->
 		<nav align="center" class="align-center">
 			<a href="home.php"><h1>STASYS</h1></a>
-			<p>Student Activity System v0.1</p>
+			<p>Student Activity System v0.2</p>
 			<a href="user_profile.php"><i class="fa fa-user-circle-o" aria-hidden="true"></i> <?php echo $rowuser['un']; ?></a>&nbsp;&nbsp;&nbsp;
-			<i class="fa fa-calendar" aria-hidden="true"></i> Add Event&nbsp;&nbsp;&nbsp;
+			<a href="event_add.php"><i class="fa fa-calendar" aria-hidden="true"></i> Add Event</a>&nbsp;&nbsp;&nbsp;
 			<a href="logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Log Out</a>
 		</nav>
-		<nav>
-			<form name="form2" method="post" action="event_add.php">
-				<table>
-					<tr><td>Title</td><td>: <input name="title" type="text"/></td></tr>
-					<tr><td>Description</td><td>: <input name="info" type="text"/></td></tr>
-					<tr><td>Date</td><td>: <input name="date" type="date"/></td><tr>
-					<tr><td>Time</td><td>: <input name="time" type="time"/></td><tr>
-					<tr><td>Quota</td><td>: <input name="quota" type="text"/></td></tr>
-				</table>
-				<button name="addevent" type="submit">Submit</button><a href="home.php"><input type="button" value="Cancel"/></a>
-			</form>
-		</nav>
+		<!--Display event information-->
+		<div class="box-base">
+			<h1>Event Information</h1>
+			<table>
+				<tr><td><b>Title</b></td><td>: <?php echo $rowevent['title']; ?></td></tr></td></tr>
+				<tr><td><b>Date &#38; Time</b></td><td>: <?php echo $rowevent['date_time']; ?></td></tr></td></tr>
+				<tr><td><b>Organizer</b></td><td>: <?php echo $roworg['name']; ?></td></tr></td></tr>
+				<tr><td><b>Description</b></td><td>: <?php echo $rowevent['info']; ?></td></tr></td></tr>
+				<tr><td><b>Quota</b></td><td>: <?php echo $rowevent['quota']; ?></td></tr></td></tr>
+				<tr><td></td>
+					<td>
+					<a href="event_join_post.php?no=<?php echo $rowevent['id']; ?>"><input type="button" value="Join"/></a>
+					</td>
+				</tr>
+			</table><br/><br/><br/>
+			<h1>Participants</h1>
+			<ol>
+			<?php $result = mysqli_query($conn, "SELECT * FROM participation WHERE e_id = ".$rowevent['id']."");
+			if ($count['count'] > 0){
+				while($rows=mysqli_fetch_array($result)){
+					$participant = mysqli_fetch_assoc(mysqli_query($conn, "SELECT name FROM user WHERE id = ".$rows['u_id']."")); ?>
+				<li><?php echo $participant['name']; ?></li>
+			<?php } ?>
+			</ol><?php
+			}else
+				echo 'Nobody has joined this event yet. Be the first one to participate!'; ?>
+		</div>
 		<script src="https://kit.fontawesome.com/2ba9e2652f.js" crossorigin="anonymous"></script>
 	</body>
 </html>

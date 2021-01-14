@@ -18,13 +18,13 @@
 		<!--Navigation bar-->
 		<nav align="center" class="align-center">
 			<a href="home.php"><h1>STASYS</h1></a>
-			<p>Student Activity System v0.1</p>
+			<p>Student Activity System v0.2</p>
 			<i class="fa fa-user-circle-o" aria-hidden="true"></i> <?php echo $rowuser['un']; ?>&nbsp;&nbsp;&nbsp;
-			<a href="event.php"><i class="fa fa-calendar" aria-hidden="true"></i> Add Event</a>&nbsp;&nbsp;&nbsp;
+			<a href="event_add.php"><i class="fa fa-calendar" aria-hidden="true"></i> Add Event</a>&nbsp;&nbsp;&nbsp;
 			<a href="logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Log Out</a>
 		</nav>
-		<!--List existing events from Database-->
-		<div>
+		<!--Display user information-->
+		<div class="box-base">
 			<h1>User Profile</h1>
 			<table>
 				<tr><td><b>Name</b></td><td>: <?php echo $rowuser['name']; ?></td></tr>
