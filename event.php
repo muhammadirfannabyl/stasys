@@ -47,8 +47,8 @@
 		<nav>
 			<form name="form2" method="post" action="event_add.php">
 				<table>
-					<tr><td>Name</td><td>: <input name="name" type="text"/></tr>
-					<tr><td>Description</td><td>: <input name="desc" type="text"/></tr>
+					<tr><td>Title</td><td>: <input name="title" type="text"/></tr>
+					<tr><td>Description</td><td>: <input name="info" type="text"/></tr>
 					<tr><td>Date</td><td>: <input name="date" type="date"/></td>
 					<tr><td>Time</td><td>: <input name="time" type="time"/></td>
 					<tr><td>Quota</td><td>: <input name="quota" type="text"/></tr></tr>

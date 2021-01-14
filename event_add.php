@@ -10,8 +10,8 @@
 	$rowuser = $query_user->fetch_assoc();
 	
 	if(isset($_POST['addevent'])){
-		$name=$_POST['name'];
-		$desc=$_POST['desc'];
+		$title=$_POST['title'];
+		$info=$_POST['info'];
 		$date=$_POST['date'];
 		$time=$_POST['time'];
 		$quota=$_POST['quota'];
