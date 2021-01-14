@@ -25,10 +25,8 @@ if(isset($_POST['Submit']))
 	}
 	else
 	{
+		print 'setTimeout(function(){alert(\'The username or password is incorrect!\');}, 100)';
 		header('location: index.php');
-		echo "<script src='js/sweetalert.min.js'></script>";
-		echo "<script>setTimeout(function(){ swal({title: 'The username or password is incorrect!', 
-		icon: 'warning',timer: 3000}).then(function() {window.location = 'index.php';}); }, 1);</script>";
 	}
 }
 else if(isset($_POST['register']))
