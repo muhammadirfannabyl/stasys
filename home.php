@@ -8,7 +8,7 @@
 	$sqluser = "SELECT * FROM user WHERE u_id ='$user_id'";
 	$query_user = $conn->query($sqluser);
 	
-	$rowuser =$query_user->fetch_assoc();
+	$rowuser = $query_user->fetch_assoc();
 ?>
 <html>
 	<style>
@@ -43,7 +43,7 @@
 		<!--Navigation bar-->
 		<nav align="center" class="align-center">
 			<h1>STASYS</h1>
-			<a href="user_page.php"><i class="fa fa-user-circle-o" aria-hidden="true"></i> <?php echo $rowuser['un']; ?></a>
+			<a href="user_page.php"><i class="fa fa-user-circle-o" aria-hidden="true"></i> username</a>
 			<a href="event_page.php"><i class="fa fa-calendar" aria-hidden="true"></i> Events</a>
 			<a href="logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Log Out</a>
 		</nav>
