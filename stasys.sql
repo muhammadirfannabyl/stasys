@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.1
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 14, 2021 at 02:15 PM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.3
+-- Generation Time: Jan 14, 2021 at 02:37 PM
+-- Server version: 10.4.17-MariaDB
+-- PHP Version: 8.0.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -34,7 +33,7 @@ CREATE TABLE `event` (
   `desc` varchar(255) NOT NULL,
   `when` datetime NOT NULL,
   `quota` int(5) NOT NULL,
-  `created` date NOT NULL
+  `created` date NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -47,7 +46,7 @@ CREATE TABLE `participation` (
   `id` int(5) NOT NULL,
   `u_id` int(5) NOT NULL,
   `e_id` int(5) NOT NULL,
-  `created` date NOT NULL
+  `created` date NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -64,8 +63,15 @@ CREATE TABLE `user` (
   `name` varchar(50) NOT NULL,
   `prog` varchar(10) NOT NULL,
   `part` int(2) NOT NULL,
-  `created` date NOT NULL
+  `created` date NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`id`, `un`, `pw`, `mat_id`, `name`, `prog`, `part`, `created`) VALUES
+(1, 'admin', 'edmin', '2018123456', 'STASYS Administrator', 'SYSTEM', 0, '2021-01-14');
 
 --
 -- Indexes for dumped tables
@@ -109,7 +115,7 @@ ALTER TABLE `participation`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
