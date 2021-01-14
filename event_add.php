@@ -23,7 +23,7 @@
 		if($result){
 			echo '
 			<script>
-				alert("SUCCESS: '.$title.', '.$info.', '.$date.', '.$time.', '.$date_time.', '.$quota.' ");
+				alert("SUCCESS: Event has been added successfully.");
 				window.location = "home.php";
 			</script>
 			';
@@ -31,7 +31,7 @@
 		else{
 			echo '
 			<script>
-				alert("FAIL: '.$title.', '.$info.', '.$date.', '.$time.', '.$date_time.', '.$quota.' ");
+				alert("FAIL: Event cannot be added.");
 				window.location = "event.php";
 			</script>
 			';
