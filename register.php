@@ -5,7 +5,7 @@
         <form method='post' action='register.php'>
         <table>
             <tr>
-                <td>User Name</td>
+                <td>Username</td>
                 <td><input type="text" class="form-control" name="username" id="username" required="required" maxlength="50"></td>
             </tr>
 
