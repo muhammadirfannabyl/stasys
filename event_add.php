@@ -31,7 +31,7 @@
 		else{
 			echo '
 			<script>
-				alert("'.$datetime.' Cannot add entry into the database.");
+				alert("'.$datetime.' Cannot add entry into the database.\nError: '.mysqli_query($conn,$sql).'");
 				window.location = "event.php";
 			</script>
 			';
