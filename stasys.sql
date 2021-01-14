@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 14, 2021 at 02:37 PM
+-- Generation Time: Jan 14, 2021 at 03:08 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.0
 
@@ -33,8 +33,18 @@ CREATE TABLE `event` (
   `desc` varchar(255) NOT NULL,
   `when` datetime NOT NULL,
   `quota` int(5) NOT NULL,
+  `u_id` int(5) NOT NULL,
   `created` date NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `event`
+--
+
+INSERT INTO `event` (`id`, `name`, `desc`, `when`, `quota`, `u_id`, `created`) VALUES
+(1, 'MAT263 Assessment 2', 'Linear Algebra II second assessment for students from CS1105D.', '2021-01-15 14:00:00', 30, 1, '0000-00-00'),
+(2, 'Semester Break Dinner', 'Dinner for students who are taking a  break for a week before enduring another pain with upcoming final assessments.', '2021-01-22 20:00:00', 25, 1, '0000-00-00'),
+(3, 'Semester Break Dinner', 'Dinner for students who are taking a  break for a week before enduring another pain with upcoming final assessments.', '2021-01-22 20:00:00', 25, 1, '0000-00-00');
 
 -- --------------------------------------------------------
 
@@ -48,6 +58,14 @@ CREATE TABLE `participation` (
   `e_id` int(5) NOT NULL,
   `created` date NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `participation`
+--
+
+INSERT INTO `participation` (`id`, `u_id`, `e_id`, `created`) VALUES
+(1, 2, 1, '2021-01-14'),
+(2, 4, 1, '2021-01-14');
 
 -- --------------------------------------------------------
 
@@ -71,7 +89,10 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `un`, `pw`, `mat_id`, `name`, `prog`, `part`, `created`) VALUES
-(1, 'admin', 'edmin', '2018123456', 'STASYS Administrator', 'SYSTEM', 0, '2021-01-14');
+(1, 'admin', 'edmin', '2018123456', 'STASYS Administrator', 'SYSTEM', 0, '2021-01-14'),
+(2, 'yongcf', 'ycfong', '2018253729', 'Yong Chua Fong', 'CS110', 5, '2021-01-14'),
+(4, 'mohana', 'mnazri', '2018566028', 'Mohammad Nik Azril', 'CS110', 5, '0000-00-00'),
+(5, 'rachfk', 'rfkaa', '2018425605', 'Rachel Fang Kaa Shui', 'CS110', 5, '0000-00-00');
 
 --
 -- Indexes for dumped tables
@@ -103,19 +124,19 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `event`
 --
 ALTER TABLE `event`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `participation`
 --
 ALTER TABLE `participation`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
