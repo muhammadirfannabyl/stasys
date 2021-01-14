@@ -1,7 +1,7 @@
 <?php
-    //session_start();
-    //require_once "config.php";
-    //Connect to database
+    session_start();
+    require_once "config.php";
+    Connect to database
 ?>
 
 <html>
@@ -19,10 +19,6 @@
             <tr>
                 <td>Password</td>
                 <td><input type="password" placeholder="Password" name="password" /></td>
-            </tr>
-            
-            <tr>
-                <td><input type="checkbox" checked="checked" name="remember"> Remember me</td>
             </tr>
                 
             <tr>
