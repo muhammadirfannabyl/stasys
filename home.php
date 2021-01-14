@@ -1,3 +1,15 @@
+<?php
+	include("config.php");
+
+	require_once 'session_check.php';
+
+	//fetch info for current  user 
+	$user_id = $_SESSION['u_id'];
+	$sqluser = "SELECT * FROM user WHERE u_id ='$user_id'";
+	$query_user = $conn->query($sqluser);
+	
+	$rowuser =$query_user->fetch_assoc();
+?>
 <html>
 	<style>
 	*{
