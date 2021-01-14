@@ -1,7 +1,7 @@
 <?php
-    session_start();
-    require_once "config.php";
-    Connect to database
+    //session_start();
+    //require_once "config.php";
+    //Connect to database
 ?>
 
 <html>
