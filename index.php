@@ -9,7 +9,7 @@
     <body>
         <h1>STASYS - LOGIN</h1>
         
-        <form name="form1" method="post" action="home.php">
+        <form name="form1" method="post" action=login.php">
             <table>
             <tr>
                 <td>Username</td>
