@@ -1,0 +1,12 @@
+*{
+	background-color: #ffffff00;
+	box-sizing: border-box;
+	font-family: 'Arial';
+	margin-left: 0;
+	margin-right: 0;
+	margin-top: 0;
+	scroll-behavior: smooth;
+}nav a{
+	color: darkgreen;
+	text-decoration: none;
+}
