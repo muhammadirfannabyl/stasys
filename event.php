@@ -9,10 +9,11 @@
 	$rowuser = $query_user->fetch_assoc();
 ?>
 <html>
-	<head><title>STASYS - Add Event</title>
+	<head>
+		<title>STASYS - Add Event</title>
+		<link rel="stylesheet" type="text/css" href="styles.css"/>
 	</head>
 	<body>
-		<link rel="stylesheet" type="text/css" href="styles.css">
 		<!--Navigation bar-->
 		<nav align="center" class="align-center">
 			<a href="home.php"><h1>STASYS</h1></a>
