@@ -49,7 +49,8 @@
 				<table>
 					<tr><td>Name</td><td>: <input name="name" type="text"/></tr>
 					<tr><td>Description</td><td>: <input name="desc" type="text"/></tr>
-					<tr><td>Date and Time</td><td>: <input name="date" type="datetime-local"/>
+					<tr><td>Date</td><td>: <input name="date" type="date"/></td>
+					<tr><td>Time</td><td>: <input name="time" type="time"/></td>
 					<tr><td>Quota</td><td>: <input name="quota" type="text"/></tr></tr>
 				</table>
 				<button name="addevent" type="submit">Submit</button><a href="home.php"><input type="button" value="Cancel"/></a>
