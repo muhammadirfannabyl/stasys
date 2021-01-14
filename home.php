@@ -3,9 +3,8 @@
 
 	require_once 'session_check.php';
 
-	//fetch info for current  user 
-	$user_id = $_SESSION['user_id'];
-	$sqluser = "SELECT * FROM user WHERE u_id ='$user_id'";
+	//fetch info for current  user
+	$sqluser = "SELECT * FROM user WHERE id ='".$_SESSION['id']."'";
 	$query_user = $conn->query($sqluser);
 	
 	$rowuser = $query_user->fetch_assoc();
