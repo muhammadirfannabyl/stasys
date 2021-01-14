@@ -82,7 +82,7 @@
 			while($rows=mysqli_fetch_array($result)){ ?>
 	<div class="box-event">
 				<b><?php echo $rows['name']; ?></b><br/><br/>
-				 echo $rows['date']; <br/><br/>
+				<? echo $rows['date']; ?><br/><br/>
 				0/30 Joined
 				<input type="button" style="float: right" value="View"/>
 			</div>
