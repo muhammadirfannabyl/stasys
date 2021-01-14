@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 4.9.5
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Jan 14, 2021 at 03:08 PM
--- Server version: 10.4.17-MariaDB
--- PHP Version: 8.0.0
+-- Host: 127.0.0.1:3306
+-- Generation Time: Jan 14, 2021 at 06:50 PM
+-- Server version: 10.4.15-MariaDB
+-- PHP Version: 7.2.34
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -18,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `stasys`
+-- Database: `u726414194_stasys`
 --
 
 -- --------------------------------------------------------
@@ -29,9 +30,9 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `event` (
   `id` int(5) NOT NULL,
-  `name` varchar(100) NOT NULL,
-  `desc` varchar(255) NOT NULL,
-  `when` datetime NOT NULL,
+  `title` varchar(100) NOT NULL,
+  `info` varchar(255) NOT NULL,
+  `date_time` datetime NOT NULL,
   `quota` int(5) NOT NULL,
   `u_id` int(5) NOT NULL,
   `created` date NOT NULL DEFAULT current_timestamp()
@@ -41,10 +42,11 @@ CREATE TABLE `event` (
 -- Dumping data for table `event`
 --
 
-INSERT INTO `event` (`id`, `name`, `desc`, `when`, `quota`, `u_id`, `created`) VALUES
-(1, 'MAT263 Assessment 2', 'Linear Algebra II second assessment for students from CS1105D.', '2021-01-15 14:00:00', 30, 1, '0000-00-00'),
-(2, 'Semester Break Dinner', 'Dinner for students who are taking a  break for a week before enduring another pain with upcoming final assessments.', '2021-01-22 20:00:00', 25, 1, '0000-00-00'),
-(3, 'Semester Break Dinner', 'Dinner for students who are taking a  break for a week before enduring another pain with upcoming final assessments.', '2021-01-22 20:00:00', 25, 1, '0000-00-00');
+INSERT INTO `event` (`id`, `title`, `info`, `date_time`, `quota`, `u_id`, `created`) VALUES
+(1, 'MAT263 Assessment 2', 'Linear Algebra II second assessment for students from CS1105D.', '2021-01-15 00:00:00', 30, 1, '0000-00-00'),
+(2, 'Semester Break Dinner', 'Dinner for students who are taking a  break for a week before enduring another pain with upcoming final assessments.', '2021-01-22 00:00:00', 25, 1, '0000-00-00'),
+(3, 'Partyyy', 'LETS GO PARTY!', '2021-01-22 00:00:00', 25, 1, '0000-00-00'),
+(10, 'Sleep', 'Let us go to sleep.', '2021-01-15 02:10:00', 10, 4, '2021-01-14');
 
 -- --------------------------------------------------------
 
@@ -91,8 +93,8 @@ CREATE TABLE `user` (
 INSERT INTO `user` (`id`, `un`, `pw`, `mat_id`, `name`, `prog`, `part`, `created`) VALUES
 (1, 'admin', 'edmin', '2018123456', 'STASYS Administrator', 'SYSTEM', 0, '2021-01-14'),
 (2, 'yongcf', 'ycfong', '2018253729', 'Yong Chua Fong', 'CS110', 5, '2021-01-14'),
-(4, 'mohana', 'mnazri', '2018566028', 'Mohammad Nik Azril', 'CS110', 5, '0000-00-00'),
-(5, 'rachfk', 'rfkaa', '2018425605', 'Rachel Fang Kaa Shui', 'CS110', 5, '0000-00-00');
+(4, 'mohana', 'mnazri', '2018566028', 'Mohammad Nik Azril', 'CS110', 5, '2021-01-13'),
+(5, 'rachfk', 'rfkaa', '2018425605', 'Rachel Fang Kaa Shui', 'CS110', 5, '2021-01-15');
 
 --
 -- Indexes for dumped tables
@@ -124,7 +126,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `event`
 --
 ALTER TABLE `event`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `participation`
