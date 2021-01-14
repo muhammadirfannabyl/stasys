@@ -6,12 +6,12 @@ session_start();
 if(isset($_POST['Submit']))
 {
     //post user id and password
-    $username = mysqli_real_escape_string($conn, $_POST['username']);
-    $pwd = mysqli_real_escape_string($conn, $_POST['password']);
+    $un = mysqli_real_escape_string($conn, $_POST['username']);
+    $pw = mysqli_real_escape_string($conn, $_POST['password']);
 
 
     //query to find user
-    $sql = "SELECT * FROM user WHERE username = '$username' AND password = '$pwd'";
+    $sql = "SELECT * FROM user WHERE username = '$un' AND password = '$pw'";
     $query = $conn->query($sql);
     $row=$query->fetch_assoc();
 
@@ -19,7 +19,7 @@ if(isset($_POST['Submit']))
     if($query->num_rows > 0)
 	{
 	    
-	    $_SESSION['user_id'] = $row['user_id'];
+	    $_SESSION['id'] = $row['id'];
 
 		header('location: home.php');
 		
@@ -27,7 +27,7 @@ if(isset($_POST['Submit']))
 	else
 	{
 	    echo "<script src='js/sweetalert.min.js'></script>";
-	    echo "<script>setTimeout(function(){ swal({title: 'Sila guna username / Password yang betul untuk log masuk!', 
+	    echo "<script>setTimeout(function(){ swal({title: 'The username or password is incorrect!', 
 		icon: 'warning',timer: 3000}).then(function() {window.location = 'index.php';}); }, 1);</script>";
 	}
 }
