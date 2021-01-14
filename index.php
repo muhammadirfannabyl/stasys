@@ -22,7 +22,7 @@
             </tr>
             
             <tr>
-                <td><input type="checkbox" checked="checked" name="remember"> Remember me></td>
+                <td><input type="checkbox" checked="checked" name="remember"> Remember me</td>
             </tr>
                 
             <tr>
