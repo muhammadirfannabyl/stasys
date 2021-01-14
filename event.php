@@ -1,3 +1,13 @@
+<?php
+	include("config.php");
+	
+	require_once 'session_check.php';
+	
+	//fetch info for current  user
+	$sqluser = "SELECT * FROM user WHERE id ='".$_SESSION['id']."'";
+	$query_user = $conn->query($sqluser);
+	$rowuser = $query_user->fetch_assoc();
+?>
 <html>
 	<head><title>STASYS - Add Event</title>
 	<style>
