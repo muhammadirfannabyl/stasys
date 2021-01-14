@@ -21,7 +21,7 @@
 		if($result){
 			echo '
 			<script>
-				alert("Entry has been added into the database.");
+				alert("'.$date.' Entry has been added into the database.");
 				window.location = "home.php";
 			</script>
 			';
@@ -29,7 +29,7 @@
 		else{
 			echo '
 			<script>
-				alert("Cannot add entry into the database.");
+				alert("'.$date.' Cannot add entry into the database.");
 				window.location = "event.php";
 			</script>
 			';
