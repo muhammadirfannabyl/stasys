@@ -13,8 +13,10 @@
 		$name=$_POST['name'];
 		$desc=$_POST['desc'];
 		$date=$_POST['date'];
+		$time=$_POST['time'];
 		$quota=$_POST['quota'];
-		$sql="INSERT INTO event (name, desc, when, quota, u_id) VALUES ('{$name}', '{$desc}', '{$date}', '{$quota}', '{$uid}')";
+		$merge = new DateTime($date->format('Y-m-d').' '.$time->format('H:i:s'));
+		$sql="INSERT INTO event (name, desc, when, quota, u_id) VALUES ('{$name}', '{$desc}', '{$merge}', '{$quota}', '{$uid}')";
 
 		$result=mysqli_query($conn,$sql);
 
