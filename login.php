@@ -27,6 +27,7 @@ if(isset($_POST['Submit']))
 	{
 		echo "<script src='js/sweetalert.min.js'></script>";
 	    	echo "<script>setTimeout(function(){ swal({title: 'Sila guna username / Password yang betul untuk log masuk!', 
+		icon: 'warning',timer: 3000}).then(function() {window.location = 'index.php';}); }, 1);</script>";
 	}
 }
 else if(isset($_POST['register']))
