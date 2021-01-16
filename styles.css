@@ -26,7 +26,7 @@
 }.box-event:hover{
 	background-color: gray;
 }.text{
-	margin: 0 auto 20px auto;
+	margin: 0 auto 5px auto;
 }.vis{
 	border: 2px dashed red;
 }
