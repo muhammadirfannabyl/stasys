@@ -4,9 +4,7 @@
 	require_once 'session_check.php';
 	
 	//fetch info for current  user
-	$sqluser = "SELECT * FROM user WHERE id ='".$_SESSION['id']."'";
-	$query_user = $conn->query($sqluser);
-	
+	$query_user = $conn->query("SELECT * FROM user WHERE id ='".$_SESSION['id']."'");
 	$rowuser = $query_user->fetch_assoc();
 ?>
 <html>
@@ -26,17 +24,14 @@
 		<!--List existing events from database-->
 		<div class="box-base">
 			<h1>Events</h1>
-		<?php
-			$result = mysqli_query($conn, "SELECT * FROM event ORDER BY date_time DESC");
+			<?php $result = mysqli_query($conn, "SELECT * FROM event ORDER BY date_time DESC");
 			while($rows=mysqli_fetch_array($result)){
 			$count = mysqli_fetch_assoc(mysqli_query($conn, "SELECT COUNT(u_id) as count FROM participation WHERE e_id = ".$rows['id']."")); ?>
 	<div class="box-event">
 				<!--b><?php // echo $rows['id']; ?></b><br/><br/-->
 				<b><?php echo $rows['title']; ?></b><br/><br/>
 				<?php echo $rows['date_time']; ?><br/><br/>
-				<?php
-					echo $count['count'].' participant(s) joined';
-				?>
+				<?php echo $count['count'].' participant(s) joined'; ?>
 				<a href="event.php?no=<?php echo $rows['id']; ?>"><input type="button" style="float: right" value="View"/></a>
 			</div>
 		<?php } ?>

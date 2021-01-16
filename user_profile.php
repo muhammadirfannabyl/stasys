@@ -4,9 +4,7 @@
 	require_once 'session_check.php';
 	
 	//fetch info for current  user
-	$sqluser = "SELECT * FROM user WHERE id ='".$_SESSION['id']."'";
-	$query_user = $conn->query($sqluser);
-	
+	$query_user = $conn->query("SELECT * FROM user WHERE id ='".$_SESSION['id']."'");
 	$rowuser = $query_user->fetch_assoc();
 ?>
 <html>

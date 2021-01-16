@@ -3,7 +3,7 @@
 	
 	require_once 'session_check.php';
 	
-	//fetch info for current  user
+	//fetch info for current user
 	$query_user = $conn->query("SELECT * FROM user WHERE id ='".$_SESSION['id']."'");
 	$rowuser = $query_user->fetch_assoc();
 	
@@ -38,7 +38,7 @@
 				<tr><td><b>Title</b></td><td>: <?php echo $rowevent['title']; ?></td></tr></td></tr>
 				<tr><td><b>Date &#38; Time</b></td><td>: <?php echo $rowevent['date_time']; ?></td></tr></td></tr>
 				<tr><td><b>Organizer</b></td><td>: <?php echo $roworg['name']; ?></td></tr></td></tr>
-				<tr><td><b>Description</b></td><td>: <?php echo $rowevent['info']; ?></td></tr></td></tr>
+				<tr><td><b>Description</b></td><td>: <?php echo $rowevent['description']; ?></td></tr></td></tr>
 				<tr><td><b>Quota</b></td><td>: <?php echo $rowevent['quota']; ?></td></tr></td></tr>
 				<tr><td></td>
 					<td>
@@ -56,7 +56,7 @@
 			<?php } ?>
 			</ol><?php
 			}else
-				echo 'Nobody has joined this event yet. Be the first one to participate!'; ?>
+				echo 'Nobody has joined this event yet. Become the first one to participate!'; ?>
 		</div>
 		<script src="https://kit.fontawesome.com/2ba9e2652f.js" crossorigin="anonymous"></script>
 	</body>
