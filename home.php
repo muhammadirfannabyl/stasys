@@ -29,10 +29,9 @@
 			$count = mysqli_fetch_assoc(mysqli_query($conn, "SELECT COUNT(u_id) as count FROM participation WHERE e_id = ".$rows['id']."")); ?>
 	<div class="box-event">
 				<!--b><?php // echo $rows['id']; ?></b><br/><br/-->
-				<div class="text"><b><?php echo $rows['title']; ?></b><br/><br/></div>
-				<div class="text"><?php echo $rows['date_time']; ?><br/><br/></div>
-				<div class="text"><?php echo $count['count'].' participant(s) joined'; ?></div>
-				<a href="event.php?no=<?php echo $rows['id']; ?>"><input type="button" value="View"/></a>
+				<div class="text"><b><?php echo $rows['title']; ?></div>
+				<div class="text"><?php echo $rows['date_time']; ?></div>
+				<div class="text"><?php echo $count['count'].' participant(s) joined'; ?><a href="event.php?no=<?php echo $rows['id']; ?>"><input type="button" value="View"/></a></div>
 			</div>
 		<?php } ?>
 </div>

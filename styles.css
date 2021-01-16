@@ -6,7 +6,6 @@
 	margin-right: 0;
 	margin-top: 0;
 	scroll-behavior: smooth;
-}form #event{
 }nav a{
 	color: darkgreen;
 	text-decoration: none;
@@ -26,7 +25,7 @@
 	width: 960px;
 }.box-event:hover{
 	background-color: gray;
-}.box-event.text{
+}.box-event.text + input{
 	margin: 10px auto 0 auto;
 }.vis{
 	border: 2px dashed red;
