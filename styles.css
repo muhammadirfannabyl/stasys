@@ -8,6 +8,7 @@
 	scroll-behavior: smooth;
 }nav a{
 	color: darkgreen;
+	margin: 0 20px;
 	text-decoration: none;
 }textarea.static{
 	resize: none;
@@ -31,6 +32,7 @@
 	float: right;
 }.title{
 	font-size: 48px;
-}.vis{
+	font-weight: bold;
+}.vis{ /* Add this into class if you want to see how the tag is spaced*/
 	border: 2px dashed red;
 }
