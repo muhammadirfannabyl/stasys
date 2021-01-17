@@ -16,12 +16,12 @@
 	</head>
 	<body>
 		<!--Navigation bar-->
-		<nav class="align-center">
-			<a href="home.php"><h1>STASYS</h1></a>
+		<nav class="align-center vis">
+			<a class="vis" href="home.php"><h1>STASYS</h1></a>
 			<p>Student Activity System v0.2</p>
-			<a href="user.php"><i class="fa fa-user-circle-o" aria-hidden="true"></i> <?php echo $rowuser['un']; ?></a>&nbsp;&nbsp;&nbsp;
-			<a href="event_add.php"><i class="fa fa-calendar" aria-hidden="true"></i> Add Event</a>&nbsp;&nbsp;&nbsp;
-			<a href="logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Log Out</a>
+			<a class="vis" href="user.php"><i class="fa fa-user-circle-o" aria-hidden="true"></i> <?php echo $rowuser['un']; ?></a>&nbsp;&nbsp;&nbsp;
+			<a class="vis" href="event_add.php"><i class="fa fa-calendar" aria-hidden="true"></i> Add Event</a>&nbsp;&nbsp;&nbsp;
+			<a class="vis" href="logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Log Out</a>
 		</nav>
 		<!--List existing events from database-->
 		<div class="box-base">
