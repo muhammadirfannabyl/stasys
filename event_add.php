@@ -33,7 +33,7 @@
 					<tr><td>Quota</td><td>: <input name="quota" type="text" size="5"/></td></tr><tr></tr>
 					<tr><td>Description</td><td>: <textarea name="info" class="static" rows="8" cols="40"></textarea></td></tr>
 				</table>
-				<button name="addevent" type="submit">Submit</button>&nbsp;<a href="home.php"><input type="button" value="Cancel"/></a>
+				<button name="addevent" type="submit">Submit</button>&nbsp;<a href="home.php"><input class="vis" type="button" value="Cancel"/></a>
 			</form>
 		</nav>
 		<script src="https://kit.fontawesome.com/2ba9e2652f.js" crossorigin="anonymous"></script>
