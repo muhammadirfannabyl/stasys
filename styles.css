@@ -29,6 +29,8 @@
 	margin: 15px 50px;
 }.text a input{
 	float: right;
+}.title{
+	font-size: 48px;
 }.vis{
 	border: 2px dashed red;
 }
