@@ -22,7 +22,7 @@
 			<a href="logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Log Out</a>
 		</nav>
 		<!--Form to add event-->
-		<div>
+		<div class="box-base">
 			<h1>Add Event</h1>
 			<form method="post" action="event_add_post.php">
 				<table>
