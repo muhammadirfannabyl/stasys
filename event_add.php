@@ -32,7 +32,7 @@
 					<tr><td>Place</td><td>: <input name="place" type="text"/></td><tr>
 					<tr><td>Quota</td><td>: <input name="quota" type="text" size="5"/></td></tr><tr></tr>
 					<tr><td>Description</td><td>: <textarea name="info" class="static" rows="8" cols="40"></textarea></td></tr>
-					<tr><td></td><td><button class="vis" name="addevent" type="submit">Submit</button><a href="home.php"><input type="button" value="Cancel"/></a></td></tr>
+					<tr><td></td><td><button name="addevent" type="submit">Submit</button><a href="home.php"><input type="button" value="Cancel"/></a></td></tr>
 				</table>
 			</form>
 		</nav>
