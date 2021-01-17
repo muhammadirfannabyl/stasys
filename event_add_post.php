@@ -12,9 +12,10 @@
 		$info=$_POST['info'];
 		$date=$_POST['date'];
 		$time=$_POST['time'];
+		$location=$_POST['place'];
 		$quota=$_POST['quota'];
 		$date_time=date('Y-m-d H:i:s', strtotime("$date $time"));
-		$sql="INSERT INTO event (title, description, date_time, quota, u_id) VALUES ('{$title}', '{$info}', '{$date_time}', '{$quota}', '{$uid}')";
+		$sql="INSERT INTO event (title, description, date_time, location quota, u_id) VALUES ('{$title}', '{$info}', '{$date_time}', '{$location}', '{$quota}', '{$uid}')";
 
 		$result=mysqli_query($conn,$sql);
 
