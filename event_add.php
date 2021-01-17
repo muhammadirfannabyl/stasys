@@ -16,9 +16,9 @@
 		<!--Navigation bar-->
 		<nav align="center" class="align-center">
 			<a href="home.php"><h1>STASYS</h1></a>
-			<p>Student Activity System v0.1</p>
-			<a href="user.php"><i class="fa fa-user-circle-o" aria-hidden="true"></i> <?php echo $rowuser['un']; ?></a>&nbsp;&nbsp;&nbsp;
-			<i class="fa fa-calendar" aria-hidden="true"></i> Add Event&nbsp;&nbsp;&nbsp;
+			<p>Student Activity System v0.2</p>
+			<a href="user.php"><i class="fa fa-user-circle-o" aria-hidden="true"></i> <?php echo $rowuser['un']; ?></a>
+			<i class="fa fa-calendar" aria-hidden="true"></i> Add Event
 			<a href="logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Log Out</a>
 		</nav>
 		<!--Form to add event-->
