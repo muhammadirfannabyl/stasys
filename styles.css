@@ -19,12 +19,12 @@
 }.box-base{
 	padding: 0;
 	margin: 0 auto 0 auto;
-	max-width: 1200px;
+	width: 1200px;
 }.box-event{
 	background-color: lightgray;
 	padding: 10px 0;
 	margin: 20px auto;
-	width: 960px;
+	max-width: 960px;
 }.box-event:hover{
 	background-color: #e4fef5;
 }.text{
