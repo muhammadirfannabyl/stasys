@@ -16,7 +16,7 @@
 		$quota=$_POST['quota'];
 		$date_time=date('Y-m-d H:i:s', strtotime("$date $time"));
 		
-		$result=mysqli_query($conn,"INSERT INTO event (title, description, date_time, location, quota, u_id) VALUES ('{$title}', '{$info}', '{$date_time}', '{$location}', '{$quota}', '{$uid}')");
+		$result=mysqli_query($conn,"INSERT INTO event (title, description, date_time, location, quota, u_id) VALUES ('{$title}', '{$info}', '{$date_time}', '{$location}', '{$quota}', '".$_SESSION['id']."')");
 
 		if($result)
 			echo '<script>alert("SUCCESS: Event has been added successfully."); window.location = "home.php"; </script>';
