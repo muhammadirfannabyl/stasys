@@ -37,9 +37,10 @@
 			<table>
 				<tr><td><b>Title</b></td><td>: <?php echo $rowevent['title']; ?></td></tr></td></tr>
 				<tr><td><b>Date &#38; Time</b></td><td>: <?php echo $rowevent['date_time']; ?></td></tr></td></tr>
+				<tr><td><b>Place</b></td><td>: <?php echo $rowevent['location']; ?></td></tr></td></tr>
+				<tr><td><b>Quota</b></td><td>: <?php echo $rowevent['quota']; ?></td></tr></td></tr>
 				<tr><td><b>Organizer</b></td><td>: <?php echo $roworg['name']; ?></td></tr></td></tr>
 				<tr><td><b>Description</b></td><td>: <?php echo $rowevent['description']; ?></td></tr></td></tr>
-				<tr><td><b>Quota</b></td><td>: <?php echo $rowevent['quota']; ?></td></tr></td></tr>
 				<tr><td></td>
 					<td>
 					<a href="event_join_post.php?no=<?php echo $rowevent['id']; ?>"><input type="button" value="Join"/></a>
