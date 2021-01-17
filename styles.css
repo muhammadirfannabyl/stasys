@@ -6,8 +6,6 @@
 	margin-right: 0;
 	margin-top: 0;
 	scroll-behavior: smooth;
-}a input{
-	float: right;
 }nav a{
 	color: darkgreen;
 	text-decoration: none;
@@ -29,6 +27,8 @@
 	background-color: #e4fef5;
 }.text{
 	margin: 15px 50px;
+}.text a input{
+	float: right;
 }.vis{
 	border: 2px dashed red;
 }
