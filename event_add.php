@@ -25,7 +25,7 @@
 		<div class="box-base">
 			<h1>Add Event</h1>
 			<form class="vis" method="post" action="event_add_post.php">
-				<table>
+				<table class="vis">
 					<tr><td>Title</td><td>: <input name="title" type="text" size="38"/></td></tr>
 					<tr><td>Date</td><td>: <input name="date" type="date"/></td><tr>
 					<tr><td>Time</td><td>: <input name="time" type="time"/></td><tr>
@@ -33,7 +33,7 @@
 					<tr><td>Quota</td><td>: <input name="quota" type="text" size="5"/></td></tr><tr></tr>
 					<tr><td>Description</td><td>: <textarea name="info" class="static" rows="8" cols="40"></textarea></td></tr>
 				</table>
-				<button name="addevent" type="submit">Submit</button>&nbsp;<a href="home.php"><input class="vis" type="button" value="Cancel"/></a>
+				<button name="addevent" type="submit">Submit</button>&nbsp;<a href="home.php"><input type="button" value="Cancel"/></a>
 			</form>
 		</nav>
 		<script src="https://kit.fontawesome.com/2ba9e2652f.js" crossorigin="anonymous"></script>
