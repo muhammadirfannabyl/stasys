@@ -24,8 +24,8 @@
 		<!--Navigation bar-->
 		<div class="box-base">
 			<h1>Add Event</h1>
-			<form class="vis" method="post" action="event_add_post.php">
-				<table class="vis">
+			<form method="post" action="event_add_post.php">
+				<table class="align-center">
 					<tr><td>Title</td><td>: <input name="title" type="text" size="38"/></td></tr>
 					<tr><td>Date</td><td>: <input name="date" type="date"/></td><tr>
 					<tr><td>Time</td><td>: <input name="time" type="time"/></td><tr>
