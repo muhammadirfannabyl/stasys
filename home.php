@@ -17,8 +17,8 @@
 		<nav class="align-center vis">
 			<a class="title vis" href="home.php">STASYS</a>
 			<p>Student Activity System v0.2</p>
-			<a class="vis" href="user.php"><i class="fa fa-user-circle-o" aria-hidden="true"></i> <?php echo $rowuser['un']; ?></a>&nbsp;&nbsp;&nbsp;
-			<a class="vis" href="event_add.php"><i class="fa fa-calendar" aria-hidden="true"></i> Add Event</a>&nbsp;&nbsp;&nbsp;
+			<a class="vis" href="user.php"><i class="fa fa-user-circle-o" aria-hidden="true"></i> <?php echo $rowuser['un']; ?></a>
+			<a class="vis" href="event_add.php"><i class="fa fa-calendar" aria-hidden="true"></i> Add Event</a>
 			<a class="vis" href="logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Log Out</a>
 		</nav>
 		<!--List existing events from database-->
