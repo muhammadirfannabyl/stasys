@@ -19,7 +19,7 @@
 }.box-base{
 	padding: 0;
 	margin: 0 auto 0 auto;
-	width: 1200px;
+	max-width: 1200px;
 }.box-event{
 	background-color: lightgray;
 	padding: 10px 0;
