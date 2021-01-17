@@ -11,13 +11,11 @@
 	<head>
 		<title>STASYS - Home</title>
 		<link rel="stylesheet" type="text/css" href="./styles.css"/>
-		<style>
-		</style>
 	</head>
 	<body>
 		<!--Navigation bar-->
 		<nav class="align-center vis">
-			<a class="vis" href="home.php"><h1>STASYS</h1></a>
+			<a class="title vis" href="home.php">STASYS</a>
 			<p>Student Activity System v0.2</p>
 			<a class="vis" href="user.php"><i class="fa fa-user-circle-o" aria-hidden="true"></i> <?php echo $rowuser['un']; ?></a>&nbsp;&nbsp;&nbsp;
 			<a class="vis" href="event_add.php"><i class="fa fa-calendar" aria-hidden="true"></i> Add Event</a>&nbsp;&nbsp;&nbsp;
