@@ -14,12 +14,12 @@
 	</head>
 	<body>
 		<!--Navigation bar-->
-		<nav align="center" class="align-center">
-			<a href="home.php"><h1>STASYS</h1></a>
+		<nav class="vis">
+			<a class="title vis" href="home.php">STASYS</a>
 			<p>Student Activity System v0.2</p>
 			<i class="fa fa-user-circle-o" aria-hidden="true"></i> <?php echo $rowuser['un']; ?>
-			<a href="event_add.php"><i class="fa fa-calendar" aria-hidden="true"></i> Add Event</a>
-			<a href="logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Log Out</a>
+			<a class="vis" href="event_add.php"><i class="fa fa-calendar" aria-hidden="true"></i> Add Event</a>
+			<a class="vis" href="logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Log Out</a>
 		</nav>
 		<!--Display user information-->
 		<div class="box-base">
