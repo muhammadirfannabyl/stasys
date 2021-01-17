@@ -21,7 +21,7 @@
 			<i class="fa fa-calendar" aria-hidden="true"></i> Add Event&nbsp;&nbsp;&nbsp;
 			<a href="logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Log Out</a>
 		</nav>
-		<!--Navigation bar-->
+		<!--Form to add event-->
 		<div class="box-base">
 			<h1>Add Event</h1>
 			<form method="post" action="event_add_post.php">
@@ -32,8 +32,8 @@
 					<tr><td>Place</td><td>: <input name="place" type="text"/></td><tr>
 					<tr><td>Quota</td><td>: <input name="quota" type="text" size="5"/></td></tr><tr></tr>
 					<tr><td>Description</td><td>: <textarea name="info" class="static" rows="8" cols="40"></textarea></td></tr>
+					<tr><td></td><td><button name="addevent" type="submit">Submit</button>&nbsp;<a href="home.php"><input type="button" value="Cancel"/></a></td></tr>
 				</table>
-				<button name="addevent" type="submit">Submit</button>&nbsp;<a href="home.php"><input type="button" value="Cancel"/></a>
 			</form>
 		</nav>
 		<script src="https://kit.fontawesome.com/2ba9e2652f.js" crossorigin="anonymous"></script>
