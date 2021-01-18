@@ -29,6 +29,11 @@ require_once "config.php";
         color: black;
         border: 2px solid #555555;
     }
+    .center 
+    {
+        margin-left: auto;
+        margin-right: auto;
+    }
 </style>
 
 <body>
