@@ -4,9 +4,7 @@
 	require_once 'session_check.php';
 	
 	//fetch info for current  user
-	$sqluser = "SELECT * FROM user WHERE id ='".$_SESSION['id']."'";
-	$query_user = $conn->query($sqluser);
-	
+	$query_user = $conn->query("SELECT * FROM user WHERE id ='".$_SESSION['id']."'");
 	$rowuser = $query_user->fetch_assoc();
 ?>
 <html>
@@ -16,28 +14,24 @@
 	</head>
 	<body>
 		<!--Navigation bar-->
-		<nav align="center" class="align-center">
-			<a href="home.php"><h1>STASYS</h1></a>
+		<nav class="align-center">
+			<a class="title" href="home.php">STASYS</a>
 			Student Activity System v0.2
-			<a href="user_profile.php"><i class="fa fa-user-circle-o" aria-hidden="true"></i> <?php echo $rowuser['un']; ?></a>&nbsp;&nbsp;&nbsp;
-			<a href="event_add.php"><i class="fa fa-calendar" aria-hidden="true"></i> Add Event</a>&nbsp;&nbsp;&nbsp;
+			<a href="user.php"><i class="fa fa-user-circle-o" aria-hidden="true"></i> <?php echo $rowuser['un']; ?></a>
+			<a href="event_add.php"><i class="fa fa-calendar" aria-hidden="true"></i> Add Event</a>
 			<a href="logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Log Out</a>
 		</nav>
 		<!--List existing events from database-->
 		<div class="box-base">
 			<h1>Events</h1>
-		<?php
-			$result = mysqli_query($conn, "SELECT * FROM event ORDER BY date_time DESC");
+			<?php $result = mysqli_query($conn, "SELECT * FROM event ORDER BY date_time DESC");
 			while($rows=mysqli_fetch_array($result)){
 			$count = mysqli_fetch_assoc(mysqli_query($conn, "SELECT COUNT(u_id) as count FROM participation WHERE e_id = ".$rows['id']."")); ?>
 	<div class="box-event">
 				<!--b><?php // echo $rows['id']; ?></b><br/><br/-->
-				<b><?php echo $rows['title']; ?></b><br/><br/>
-				<?php echo $rows['date_time']; ?><br/><br/>
-				<?php
-					echo $count['count'].' participant(s) joined';
-				?>
-				<a href="event.php?no=<?php echo $rows['id']; ?>"><input type="button" style="float: right" value="View"/></a>
+				<div class="text"><b><?php echo $rows['title']; ?></b></div>
+				<div class="text"><?php echo $rows['date_time']; ?></div>
+				<div class="text"><?php echo $count['count'].' participant(s) joined'; ?><a href="event.php?no=<?php echo $rows['id']; ?>"><input type="button" value="View"/></a></div>
 			</div>
 		<?php } ?>
 </div>

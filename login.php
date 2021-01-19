@@ -14,17 +14,11 @@
 
 		//check if user exists
 		if($query->num_rows > 0){
-				$_SESSION['id'] = $row['id'];
+			$_SESSION['id'] = $row['id'];
 			header('location: home.php');
 		}
-		else{
-			echo '
-				<script>
-					alert("Incorrect username or password! Please try again.");
-					window.location = "index.php";
-				</script>
-			';
-		}
+		else
+			echo '<script> alert("Incorrect username or password! Please try again."); window.location = "index.php"; </script>';
 	}
 	else if(isset($_POST['register']))
 		header('location: index.php');

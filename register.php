@@ -25,7 +25,7 @@
             </tr>
             
             <tr>
-                <td>Cofnrim Password</td>
+                <td>Confirm Password</td>
                 <td><input type="password" class="form-control" name="confirmpassword" id="confirmpassword" onkeyup='' required="required" maxlength="80"></td>
             </tr>
             
