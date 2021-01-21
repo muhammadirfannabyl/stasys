@@ -63,7 +63,7 @@
             //echo "1";
             $stmt->close();
 
-            //$success_message = "Account created successfully.";
+            $success_message = "Account created successfully.";
             echo "<script src='js/sweetalert.min.js'></script>";
             echo "<script>setTimeout(function(){ swal({title: 'Success!', icon: 'success'}).then(function() {window.location = 'index.php';}); }, 1);</script>";
 
