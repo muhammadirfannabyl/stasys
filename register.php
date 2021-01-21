@@ -32,7 +32,7 @@
 
             // Check if Username already exists
             $stmt = $conn->prepare("SELECT * FROM user WHERE un = ?");
-            echo "1";
+            //echo "1";
             $stmt->bind_param("s", $username);
             //echo "1";
             $stmt->execute();
