@@ -6,13 +6,13 @@
 
 	// Register user
 	if(isset($_POST['btnsignup'])){
-	   $username = trim($_POST['username']);
-	   $password = trim($_POST['password']);
-       $confirmpassword = trim($_POST['confirmpassword']);
-       $name = trim($_POST['name']);
-       $studentid = trim($_POST['studentid']);
-       $program = trim($_POST['program']);
-       $part = trim($_POST['part']);
+        $username = trim($_POST['username']);
+        $password = trim($_POST['password']);
+        $confirmpassword = trim($_POST['confirmpassword']);
+        $name = trim($_POST['name']);
+        $studentid = trim($_POST['studentid']);
+        $program = trim($_POST['program']);
+        $part = trim($_POST['part']);
 
 	   $isValid = true;
 
@@ -63,9 +63,16 @@
             //echo "1";
             $stmt->close();
 
-            $success_message = "Account created successfully.";
-            echo "<script src='js/sweetalert.min.js'></script>";
-            echo "<script>setTimeout(function(){ swal({title: 'Success!', icon: 'success'}).then(function() {window.location = 'index.php';}); }, 1);</script>";
+            //$success_message = "Account created successfully.";
+            //echo "<script src='js/sweetalert.min.js'></script>";
+            //echo "<script>setTimeout(function(){ swal({title: 'Success!', icon: 'success'}).then(function() {window.location = 'index.php';}); }, 1);</script>";
+
+            //$result=mysqli_query($conn,"INSERT INTO event (title, description, date_time, location, quota, u_id) VALUES ('{$title}', '{$info}', '{$date_time}', '{$location}', '{$quota}', '".$_SESSION['id']."')");
+
+            if($insertSQL)
+                echo '<script>alert("SUCCESS: User has been registered successfully."); window.location = "index.php"; </script>';
+            else
+                echo '<script>alert("FAIL: User cannot be registered."); window.location = "register.php"; </script>';
 
         }
 	}
