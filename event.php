@@ -23,14 +23,15 @@
 		<link rel="stylesheet" type="text/css" href="./styles.css"/>
 	</head>
 	<body>
-		<!--Navigation bar-->
-		<nav class="vis">
-			<a class="title vis" href="home.php">STASYS</a>
-			<p>Student Activity System v0.2</p>
+		<!--STA Navigation bar-->
+		<nav class="align-center">
+			<a class="title" href="home.php">STASYS</a>
+			Student Activity System v0.2
 			<a class="vis" href="user.php"><i class="fa fa-user-circle-o" aria-hidden="true"></i> <?php echo $rowuser['un']; ?></a>
-			<a class="vis" href="event_add.php"><i class="fa fa-calendar" aria-hidden="true"></i> Add Event</a>
-			<a class="vis" href="logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Log Out</a>
+			<a><i class="fa fa-calendar" aria-hidden="true"></i> Add Event</a>
+			<a href="logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Log Out</a>
 		</nav>
+		<!--END Navigation bar-->
 		<!--Display event information-->
 		<div class="box-base">
 			<h1>Event Information</h1>
