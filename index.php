@@ -9,35 +9,11 @@ require_once "config.php";
 <head>
     <title>STASYS - Login</title>
     <link href='https://fonts.googleapis.com/css?family=Comic Neue' rel='stylesheet'>
+    <link href="C:\Users\asus\Desktop\styles.css" rel='stylesheet'>
 </head>
 
-<style>
-    body {
-        background-color: powderblue;
-    }
-
-    h1 {
-        font-family: 'Comic Neue';
-    }
-
-    table {
-        font-family: 'Comic Neue';
-    }
-
-    button {
-        background-color: white;
-        color: black;
-        border: 2px solid #555555;
-    }
-    .center 
-    {
-        margin-left: auto;
-        margin-right: auto;
-    }
-</style>
-
-<body>
-    <h1>STASYS - LOGIN</h1>
+<body class="title">
+    <div class="align-center">STASYS - LOGIN</div>
 
     <form name="form1" method="post" action="login.php">
         <table>

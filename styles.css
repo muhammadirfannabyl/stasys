@@ -1,9 +1,9 @@
 *{
-	background-color: #ffffff00;
+    background-color: powderblue;;
 	box-sizing: border-box;
-	font-family: 'Arial';
-	margin-left: 0;
-	margin-right: 0;
+	font-family: 'Comic Neue';
+	margin-left: auto;
+	margin-right: auto;
 	margin-top: 0;
 	scroll-behavior: smooth;
 }nav a{
@@ -13,8 +13,10 @@
 }textarea.static{
 	resize: none;
 }.align-center{
+	text-align: center;
 	width: 50%;
-	margin: auto;
+	margin-left: auto;
+	margin-right: auto;
 }.box-base{
 	padding: 0;
 	margin: 0 auto 0 auto;
@@ -31,8 +33,9 @@
 }.text a input{
 	float: right;
 }.title{
-	font-size: 48px;
+	font-size: 50px;
 	font-weight: bold;
+	font-family: 'Comic Neue';
 }.vis{ /* Add this into class if you want to see how the tag is spaced*/
 	border: 2px dashed red;
 }
