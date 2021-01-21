@@ -5,18 +5,13 @@
         <form method='post' action='register.php'>
         <table>
             <tr>
-                <td>Username</td>
+                <td>User Name</td>
                 <td><input type="text" class="form-control" name="username" id="username" required="required" maxlength="50"></td>
             </tr>
 
             <tr>
                 <td>Name</td>
-                <td><input type="text" class="form-control" name="username" id="username" required="required" maxlength="50"></td>
-            </tr>
-            
-            <tr>
-                <td>Email Address</td>
-                <td><input type="email" class="form-control" name="email" id="email" required="required" maxlength="50"></td>
+                <td><input type="text" class="form-control" name="name" id="name" required="required" maxlength="50"></td>
             </tr>
             
             <tr>
@@ -31,17 +26,17 @@
             
             <tr>
                 <td>Student ID</td>
-                <td><input type="text" class="form-control" name="username" id="username" required="required" maxlength="50"></td>
+                <td><input type="text" class="form-control" name="username" id="studentID" required="required" maxlength="50"></td>
             </tr>
             
             <tr>
                 <td>Program</td>
-                <td><input type="text" class="form-control" name="username" id="username" required="required" maxlength="50"></td>
+                <td><input type="text" class="form-control" name="program" id="program" required="required" maxlength="50"></td>
             </tr>
             
             <tr>
                 <td>Part</td>
-                <td><input type="text" class="form-control" name="username" id="username" required="required" maxlength="50"></td>
+                <td><input type="text" class="form-control" name="part" id="part" required="required" maxlength="50"></td>
             </tr>
             
             <tr>
