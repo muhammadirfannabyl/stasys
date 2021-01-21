@@ -6,6 +6,8 @@
 	margin-right: auto;
 	margin-top: 0;
 	scroll-behavior: smooth;
+}b{
+	background-color: #FFFFFF00;
 }nav a{
 	color: darkgreen;
 	margin: 0 20px;
@@ -28,7 +30,7 @@
 	max-width: 960px;
 }.box-event:hover{
 	background-color: #e4fef5;
-}.text + b{
+}.text{
 	background-color: #FFFFFF00;
 	margin: 15px 50px;
 }.text a input{
