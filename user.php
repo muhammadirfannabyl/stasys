@@ -32,6 +32,16 @@
 				<tr><td><b>Date Registered</b></td><td>: <?php echo $rowuser['created']; ?></td></tr>
 			</table>
 		</div>
+		<!--STA Display event that this user joined-->
+		<div class="box-base">
+			<h1>Joined Event</h1>
+			<?php $result = mysqli_query($conn, "SELECT e_id, title, date_time FROM event JOIN participation on event.id=participation.e_id WHERE participation.u_id = '".$rowuser['id']."' ORDER BY date_time DESC");
+			while($rows=mysqli_fetch_array($result)){ ?>
+				<div class="text"><?php echo $rows['title']; ?></div>
+				<div class="text"><?php echo $rows['date_time']; ?><a href="event.php?no=<?php echo $rows['e_id']; ?>"><input type="button" value="View"/></a></div>
+			<?php } ?>
+		</div>
+		<!--END Display event that this user joined-->
 		<script src="https://kit.fontawesome.com/2ba9e2652f.js" crossorigin="anonymous"></script>
 	</body>
 </html>
