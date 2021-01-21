@@ -31,7 +31,7 @@
 				<tr><td><b>Part</b></td><td>: <?php echo $rowuser['part']; ?></td></tr>
 				<tr><td><b>Date Registered</b></td><td>: <?php echo $rowuser['created']; ?></td></tr>
 			</table>
-		</div>
+		</div><br/><br/><br/>
 		<!--STA Display event that this user joined-->
 		<div class="box-base">
 			<h1>Joined Event</h1>
