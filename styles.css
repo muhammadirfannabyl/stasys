@@ -29,6 +29,7 @@
 }.box-event:hover{
 	background-color: #e4fef5;
 }.text{
+	background-color: #FFFFFF00;
 	margin: 15px 50px;
 }.text a input{
 	float: right;
