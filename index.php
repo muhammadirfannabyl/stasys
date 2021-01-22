@@ -9,7 +9,7 @@ require_once "config.php";
 <head>
     <title>STASYS - Login</title>
     <link href='https://fonts.googleapis.com/css?family=Comic Neue' rel='stylesheet'>
-    <link href="C:\Users\asus\Desktop\styles.css" rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="./styles.css"/>
 </head>
 
 <body class="title">
