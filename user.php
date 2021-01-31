@@ -16,7 +16,7 @@
 		<!--STA Navigation bar-->
 		<nav class="align-center">
 			<a class="title" href="home.php">STASYS</a>
-			Student Activity System v0.2
+			Student Activity System v<?php echo $VERSION; ?>
 			<a><i class="fa fa-user-circle-o" aria-hidden="true"></i> <?php echo $rowuser['un']; ?></a>
 			<a href="event_add.php"><i class="fa fa-calendar" aria-hidden="true"></i> Add Event</a>
 			<a href="logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Log Out</a>
@@ -35,7 +35,6 @@
 				    $result2 = mysqli_query($conn, "SELECT * FROM position WHERE id =".$rowuser['access_lvl']."");
 				    $rows2 = $result2->fetch_assoc();
 				?>
-				<div class="text"><?php echo $rows['title']; ?></div>
 				<tr><td><b>Access Level</b></td><td>: <?php echo $rows2['title']; ?></td></tr>
 			</table>
 		</div><br/><br/><br/>

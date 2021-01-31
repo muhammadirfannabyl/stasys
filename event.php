@@ -28,7 +28,7 @@
 		<!--STA Navigation bar-->
 		<nav class="align-center">
 			<a class="title" href="home.php">STASYS</a>
-			Student Activity System v0.2
+			Student Activity System v<?php echo $VERSION; ?>
 			<a href="user.php"><i class="fa fa-user-circle-o" aria-hidden="true"></i> <?php echo $rowuser['un']; ?></a>
 			<a><i class="fa fa-calendar" aria-hidden="true"></i> Add Event</a>
 			<a href="logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Log Out</a>
@@ -57,6 +57,8 @@
 					
 					if($rowuser['access_lvl'] < 3 || $rowuser['id'] == $rowevent['u_id'])
 						echo '<a href="event_edit.php?no='.$rowevent['id'].'"><input type="button" value="Edit"/></a>';
+					if($rowuser['access_lvl'] < 3 || $rowuser['id'] == $rowevent['u_id'])
+						echo '<a href="event_post.php?no='.$rowevent['id'].'&option=delete"><input type="button" value="Delete"/></a>';
 				?>
 				</td></tr>
 			</table><br/><br/><br/>
