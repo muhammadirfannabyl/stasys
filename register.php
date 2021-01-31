@@ -79,11 +79,6 @@
 
 <html>
     <body>
-
-        <?php
-        }
-        ?>
-
         <?php 
         // Display Success message
         if(!empty($success_message)){
