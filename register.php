@@ -47,7 +47,8 @@
                 //echo "1";
                 $isValid = false;
                 //echo "1";
-                $error_message = "Username is already existed.";
+                #$error_message = "Username is already existed.";
+                echo '<script>alert("Username is already existed."); window.location = "register.php"; </script>';
             }
 
         }
