@@ -10,6 +10,7 @@
 <html>
 	<head>
 		<title>STASYS - Home</title>
+		<link href='https://fonts.googleapis.com/css?family=Comic Neue' rel='stylesheet'>
 		<link rel="stylesheet" type="text/css" href="./styles.css"/>
 	</head>
 	<body>
