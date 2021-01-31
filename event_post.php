@@ -25,6 +25,24 @@
 		}
 		else
 			echo '<script>alert("FAIL: Event cannot be added."); window.location = "event.php?no='.$_GET['no'].'"; </script>';
+	// Edit event function definition
+	}elseif(isset($_POST['editevent'])){
+		$no=$_POST['no'];
+		$title=$_POST['title'];
+		$info=$_POST['info'];
+		$date=$_POST['date'];
+		$time=$_POST['time'];
+		$location=$_POST['place'];
+		$quota=$_POST['quota'];
+		$date_time=date('Y-m-d H:i:s', strtotime("$date $time"));
+		
+		// Insert value into database
+		$result=mysqli_query($conn, "UPDATE event SET title='{$title}', description='{$info}', date_time='{$date_time}', location='{$location}', quota='{$quota}' WHERE id ='{$no}'");
+		if($result){
+			echo '<script>alert("SUCCESS: Event has been edited successfully."); window.location = "event.php?no='.$_POST['no'].'"; </script>';
+		}
+		else
+			echo '<script>alert("FAIL: Event cannot be edited."); window.location = "event.php?no='.$_POST['no'].'"; </script>';
 	}elseif(isset($_GET['option']))
 		// Leave event function definition
 		if($_GET['option'] == "leave"){

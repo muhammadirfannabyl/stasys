@@ -34,14 +34,15 @@
 		<div class="box-base">
 			<h1>Edit Event</h1>
 			<form method="post" action="event_post.php">
+				<input type="hidden" name="no" value="<?php echo $_GET["no"]; ?>"/>
 				<table>
 					<tr><td>Title</td><td>: <input name="title" type="text" size="38" value="<?php echo $rowevent['title']; ?>"/></td></tr>
 					<tr><td>Date</td><td>: <input name="date" type="date" value="<?php echo date('Y-m-d', strtotime($rowevent['date_time'])); ?>"/></td><tr>
 					<tr><td>Time</td><td>: <input name="time" type="time" value="<?php echo date('H:i:s', strtotime($rowevent['date_time'])); ?>"/></td><tr>
 					<tr><td>Place</td><td>: <input name="place" type="text" value="<?php echo $rowevent['location']; ?>"/></td><tr>
 					<tr><td>Quota</td><td>: <input name="quota" type="text" size="5" value="<?php echo $rowevent['quota']; ?>"/></td></tr><tr></tr>
-					<tr><td>Description</td><td>: <textarea name="info" class="static" rows="8" cols="40" ><?php echo $rowevent['description']; ?></textarea></td></tr>
-					<tr><td></td><td><button name="edit" type="submit">Update</button><a href="home.php"><input type="button" value="Cancel"/></a></td></tr>
+					<tr><td>Description</td><td>: <textarea name="info" class="static" rows="8" cols="40"><?php echo $rowevent['description']; ?></textarea></td></tr>
+					<tr><td></td><td><button name="editevent" type="submit">Update</button><a href="event.php?no=<?php echo $_GET["no"]; ?>"><input type="button" value="Cancel"/></a></td></tr>
 				</table>
 			</form>
 		</nav>
