@@ -32,12 +32,14 @@
 				<tr><td><b>Part</b></td><td>: <?php echo $rowuser['part']; ?></td></tr>
                 <tr><td><b>Date Registered</b></td><td>: <?php echo $rowuser['created']; ?></td></tr>
                 <tr><td><b>Access Level</b></td><td>: <?php echo $rowuser['access_lvl']; ?></td></tr>
+                <tr><td><b>Access Level</b></td><td>: 
                 <script>
                     var access_lvl = parseInt($rowuser['access_lvl']);
                     if (access_lvl == 1) document.write("Developers");
                     if (access_lvl == 2) document.write("Admin");
                     if (access_lvl == 3) document.write("User");
                 </script>
+                </td></tr>
 			</table>
 		</div><br/><br/><br/>
 		<!--STA Display event that this user joined-->
