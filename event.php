@@ -13,8 +13,10 @@
 		$rowevent = $query_event->fetch_assoc();
 	}
 	
+	// Get organiser info
 	$query_org = $conn->query("SELECT * FROM user WHERE id = ".$rowevent['u_id']."");
 	$roworg = $query_org->fetch_assoc();
+	
 	$count = mysqli_fetch_assoc(mysqli_query($conn, "SELECT COUNT(u_id) as count FROM participation WHERE e_id = ".$rowevent["id"].""));
 ?>
 <html>
@@ -52,8 +54,11 @@
 		echo '<a href="event_post.php?no='.$rowevent['id'].'&option=leave"><input type="button" value="Leave"/></a>';
 	else
 		echo '<a href="event_post.php?no='.$rowevent['id'].'&option=join"><input type="button" value="Join"/></a>';
-?>				
-				</a></td></tr>
+	
+	if($rowuser['access_lvl'] < 3)
+		echo '<a href="event_edit.php?no='.$rowevent['id'].'"><input type="button" value="Edit"/></a>';
+?>	
+				</td></tr>
 			</table><br/><br/><br/>
 			<!--List participant who joined this event-->
 			<h1>Participants</h1>

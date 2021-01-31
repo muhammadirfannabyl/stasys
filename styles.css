@@ -41,7 +41,7 @@
 	font-family: 'Comic Neue';
 }.vis{ /* Add this into class if you want to see how the tag is spaced*/
 	border: 2px dashed red;
-}
+}/*
 *, *:before, *:after {
 	box-sizing: border-box;
 	margin: 0;
@@ -512,3 +512,4 @@
 	  stroke-dashoffset: 0;
 	}
   }
+*/

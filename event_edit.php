@@ -4,8 +4,17 @@
 	require_once 'session_check.php';
 	
 	//fetch info for current user
-	$query_user = $conn->query("SELECT * FROM user WHERE id ='".$_SESSION['id']."'");
+	$query_user = $conn->query("SELECT * FROM user WHERE id =".$_SESSION['id']."");
 	$rowuser = $query_user->fetch_assoc();
+	
+	// Get Event ID from previous button
+	if (isset($_GET["no"])){
+		$query_event = $conn->query("SELECT * FROM event WHERE id =".$_GET["no"]."");
+		$rowevent = $query_event->fetch_assoc();
+	}
+		
+	$query_org = $conn->query("SELECT * FROM user WHERE id = ".$rowevent['u_id']."");
+	$roworg = $query_org->fetch_assoc();
 ?>
 <html>
 	<head>
@@ -23,16 +32,16 @@
 		</nav>
 		<!--Form to add event-->
 		<div class="box-base">
-			<h1>Add Event</h1>
+			<h1>Edit Event</h1>
 			<form method="post" action="event_post.php">
 				<table>
-					<tr><td>Title</td><td>: <input name="title" type="text" size="38"/></td></tr>
-					<tr><td>Date</td><td>: <input name="date" type="date"/></td><tr>
-					<tr><td>Time</td><td>: <input name="time" type="time"/></td><tr>
-					<tr><td>Place</td><td>: <input name="place" type="text"/></td><tr>
-					<tr><td>Quota</td><td>: <input name="quota" type="text" size="5"/></td></tr><tr></tr>
-					<tr><td>Description</td><td>: <textarea name="info" class="static" rows="8" cols="40"></textarea></td></tr>
-					<tr><td></td><td><button name="addevent" type="submit">Submit</button><a href="home.php"><input type="button" value="Cancel"/></a></td></tr>
+					<tr><td>Title</td><td>: <input name="title" type="text" size="38" value="<?php echo $rowevent['title']; ?>"/></td></tr>
+					<tr><td>Date</td><td>: <input name="date" type="date" value="<?php echo date('Y-m-d', strtotime($rowevent['date_time'])); ?>"/></td><tr>
+					<tr><td>Time</td><td>: <input name="time" type="time" value="<?php echo date('H:i:s', strtotime($rowevent['date_time'])); ?>"/></td><tr>
+					<tr><td>Place</td><td>: <input name="place" type="text" value="<?php echo $rowevent['location']; ?>"/></td><tr>
+					<tr><td>Quota</td><td>: <input name="quota" type="text" size="5" value="<?php echo $rowevent['quota']; ?>"/></td></tr><tr></tr>
+					<tr><td>Description</td><td>: <textarea name="info" class="static" rows="8" cols="40" ><?php echo $rowevent['description']; ?></textarea></td></tr>
+					<tr><td></td><td><button name="edit" type="submit">Update</button><a href="home.php"><input type="button" value="Cancel"/></a></td></tr>
 				</table>
 			</form>
 		</nav>
