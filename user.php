@@ -33,9 +33,8 @@
                 <tr><td><b>Date Registered</b></td><td>: <?php echo $rowuser['created']; ?></td></tr>
                 <?php
                     $result = mysqli_query($conn, "SELECT * FROM  position JOIN user on user.access_lvl = position.id");
-                    while($rows=mysqli_fetch_array($result)){ ?>
-                        <div class="text"><?php echo $rows['title']; ?></div>
-                <?php } ?>
+                ?>
+                <div class="text"><?php echo $rows['title']; ?></div>
                 <tr><td><b>Access Level</b></td><td>: <?php echo $rows['title']; ?></td></tr>
 			</table>
 		</div><br/><br/><br/>
