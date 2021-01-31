@@ -77,10 +77,12 @@
     <?php 
         // Display Error message
         if(!empty($error_message)){
-        ?>
-        <div class="alert alert-danger">
-            <?= <script>alert($error_message); window.location = "register.php"; </script> ?>
-        </div>
+            ?>
+            <div class="alert alert-danger">
+                <?php
+                echo '<script>alert($error_message); window.location = "register.php"; </script>';
+                ?>
+            </div>
 
         <?php
         }
