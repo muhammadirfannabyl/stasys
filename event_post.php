@@ -18,9 +18,10 @@
 		$date_time=date('Y-m-d H:i:s', strtotime("$date $time"));
 		
 		$result=mysqli_query($conn,"INSERT INTO event (title, description, date_time, location, quota, u_id) VALUES ('{$title}', '{$info}', '{$date_time}', '{$location}', '{$quota}', '".$_SESSION['id']."')");
-
+		$v=$conn->query("SELECT MAX(id) FROM event");
+		$newid=$v->fetch_assoc();
 		if($result)
-			echo '<script>alert("SUCCESS: Event has been added successfully."); window.location = "event.php?no='.$_GET['no'].'"; </script>';
+			echo '<script>alert("SUCCESS: Event has been added successfully."); window.location = "event.php?no='.$newid['max'].'"; </script>';
 		else
 			echo '<script>alert("FAIL: Event cannot be added."); window.location = "event.php?no='.$_GET['no'].'"; </script>';
 	}elseif(isset($_GET['option']))
