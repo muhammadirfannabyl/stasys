@@ -17,17 +17,20 @@
 		$quota=$_POST['quota'];
 		$date_time=date('Y-m-d H:i:s', strtotime("$date $time"));
 		
+		// Insert value into database
 		$result=mysqli_query($conn,"INSERT INTO event (title, description, date_time, location, quota, u_id) VALUES ('{$title}', '{$info}', '{$date_time}', '{$location}', '{$quota}', '".$_SESSION['id']."')");
-		$v=$conn->query("SELECT MAX(id) FROM event");
-		$newid=$v->fetch_assoc();
-		if($result)
-			echo '<script>alert("SUCCESS: Event has been added successfully."); window.location = "event.php?no='.$newid['max'].'"; </script>';
+		if($result){
+			$nid = mysqli_fetch_assoc(mysqli_query($conn, "SELECT MAX(id) as id FROM event"));
+			echo '<script>alert("SUCCESS: Event has been added successfully."); window.location = "event.php?no='.$nid['id'].'"; </script>';
+		}
 		else
 			echo '<script>alert("FAIL: Event cannot be added."); window.location = "event.php?no='.$_GET['no'].'"; </script>';
 	}elseif(isset($_GET['option']))
+		// Leave event function definition
 		if($_GET['option'] == "leave"){
 			$result=mysqli_query($conn, "DELETE FROM participation WHERE u_id=".$_SESSION['id']." AND e_id=".$_GET['no']."");
 			echo '<script>alert("SUCCESS: You have left this event."); window.location = "event.php?no='.$_GET['no'].'"; </script>';
+		// Join event function definition
 		}elseif($_GET['option'] == "join"){
 			if (isset($_GET["no"])){
 				$query_event = $conn->query("SELECT * FROM event WHERE id =".$_GET["no"]."");
@@ -40,7 +43,7 @@
 					// Current total participant
 					$count = mysqli_fetch_assoc(mysqli_query($conn, "SELECT COUNT(u_id) as count FROM participation WHERE e_id = ".$_GET["no"].""));
 					// Check if there the event is not full
-					if ($count['count'] > $rowevent['quota'])
+					if ($count['count'] > $rowevent['quota'] - 1)
 						echo '<script>alert("FAIL: You cannot join this full event!"); window.location = "event.php?no='.$rowevent["id"].'"; </script>';
 					else{
 						$result=mysqli_query($conn,"INSERT INTO participation (u_id, e_id) VALUES ('".$rowuser['id']."', '".$rowevent["id"]."')");
