@@ -14,6 +14,7 @@
 		<link rel="stylesheet" type="text/css" href="./styles.css"/>
 	</head>
 	<body>
+		<header></header>
 		<!--Navigation bar-->
 		<nav class="align-center">
 			<a class="title" href="home.php">STASYS</a>
