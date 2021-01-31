@@ -32,10 +32,10 @@
 				<tr><td><b>Part</b></td><td>: <?php echo $rowuser['part']; ?></td></tr>
                 <tr><td><b>Date Registered</b></td><td>: <?php echo $rowuser['created']; ?></td></tr>
                 <?php
-                    $result = mysqli_query($conn, "SELECT * FROM  position JOIN user on user.access_lvl = position.id");
+                    $result2 = mysqli_query($conn, "SELECT * FROM position WHERE id =".$rowuser['access_lvl']."");
+					$rows2 = $result2->fetch_assoc();
                 ?>
-                <div class="text"><?php echo $rows['title']; ?></div>
-                <tr><td><b>Access Level</b></td><td>: <?php echo $rows['title']; ?></td></tr>
+                <tr><td><b>Access Level</b></td><td>: <?php echo $rows2['title']; ?></td></tr>
 			</table>
 		</div><br/><br/><br/>
 		<!--STA Display event that this user joined-->
