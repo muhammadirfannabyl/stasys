@@ -71,8 +71,8 @@
         }
     }
     // Display Error message
-    if(!empty($error_message)){
-        echo '<script>alert('.$error_message.'); window.location = "register.php"; </script>';
+    if(!empty($error_message))
+        echo '<script>alert("'.$error_message.'"); window.location = "register.php"; </script>';
 ?>
 
 <html>
