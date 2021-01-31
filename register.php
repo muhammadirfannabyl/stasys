@@ -69,21 +69,15 @@
                 echo '<script>alert("FAIL: User cannot be registered."); window.location = "register.php"; </script>';
 
         }
-	}
+    }
+    // Display Error message
+    if(!empty($error_message)){
+            echo '<script>alert("$error_message"); window.location = "register.php"; </script>';
 ?>
 
 <html>
     <body>
-    <?php 
-        // Display Error message
-        if(!empty($error_message)){
-        ?>
-        <div class="alert alert-danger">
-            <script>alert("$error_message"); window.location = "register.php"; </script>
-            <!--- <strong>Error!</strong> <?= $error_message ?> --->
-        </div>
-
-        <?php
+        <?php 
         }
         ?>
 
