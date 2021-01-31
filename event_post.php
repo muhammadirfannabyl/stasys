@@ -45,7 +45,11 @@
 			echo '<script>alert("FAIL: Event cannot be edited."); window.location = "event.php?no='.$_POST['no'].'"; </script>';
 	}elseif(isset($_GET['option']))
 		// Leave event function definition
-		if($_GET['option'] == "leave"){
+		if($_GET['option'] == "approve"){
+			$result=mysqli_query($conn, "UPDATE event SET status=1 WHERE id=".$_GET['id']."");
+			echo '<script>alert("SUCCESS: You have approved this event."); window.location = "event.php?no='.$_GET['no'].'"; </script>';
+		// Join event function definition
+		}if($_GET['option'] == "leave"){
 			$result=mysqli_query($conn, "DELETE FROM participation WHERE u_id=".$_SESSION['id']." AND e_id=".$_GET['no']."");
 			echo '<script>alert("SUCCESS: You have left this event."); window.location = "event.php?no='.$_GET['no'].'"; </script>';
 		// Join event function definition
