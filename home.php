@@ -6,6 +6,7 @@
 	//fetch info for current  user
 	$query_user = $conn->query("SELECT * FROM user WHERE id ='".$_SESSION['id']."'");
 	$rowuser = $query_user->fetch_assoc();
+	$status = "";
 ?>
 <html>
 	<head>
@@ -30,11 +31,12 @@
 					$result = mysqli_query($conn, "SELECT * FROM event WHERE status = 1 ORDER BY date_time DESC");
 				else
 					$result = mysqli_query($conn, "SELECT * FROM event ORDER BY date_time DESC");
+				
 				while($rows=mysqli_fetch_array($result)){
 				    $count = mysqli_fetch_assoc(mysqli_query($conn, "SELECT COUNT(u_id) as count FROM participation WHERE e_id = ".$rows['id']."")); ?>
 				    <div class="box-event">
 					<!--b><?php // echo $rows['id']; ?></b><br/><br/-->
-					<div class="text"><b><?php echo $rows['title']; ?></b></div>
+					<div class="text"><b><?php echo $rows['title']; ?><?php echo $status; ?></b></div>
 					<div class="text"><?php echo $rows['date_time']; ?></div>
 					<div class="text"><?php echo $count['count'].' participant(s) joined'; ?><a href="event.php?no=<?php echo $rows['id']; ?>"><input type="button" value="View"/></a></div>
 				    </div><?php
