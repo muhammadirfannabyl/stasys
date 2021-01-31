@@ -32,7 +32,7 @@
 				<tr><td><b>Part</b></td><td>: <?php echo $rowuser['part']; ?></td></tr>
                 <tr><td><b>Date Registered</b></td><td>: <?php echo $rowuser['created']; ?></td></tr>
                 <?php
-                    $query_user = $conn->query("SELECT * FROM user WHERE access_lvl ='".$_SESSION['id']."'");
+                    $query_user = $conn->query("SELECT * FROM user WHERE id ='".$_SESSION['id']."'");
                     $rowuser = $query_user->fetch_assoc();
 
                     $query_pos = $conn->query("SELECT * FROM position WHERE id ='".$rowuser['id']."'");
