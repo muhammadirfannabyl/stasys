@@ -28,7 +28,6 @@
 			<h1>Events</h1>
 			<?php $result = mysqli_query($conn, "SELECT * FROM event ORDER BY date_time DESC");
 			while($rows=mysqli_fetch_array($result)){
-				if ($rows['status'] == '1')
 				$count = mysqli_fetch_assoc(mysqli_query($conn, "SELECT COUNT(u_id) as count FROM participation WHERE e_id = ".$rows['id']."")); ?>
 				<div class="box-event">
 					<!--b><?php // echo $rows['id']; ?></b><br/><br/-->
