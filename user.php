@@ -31,13 +31,14 @@
 				<tr><td><b>Programme</b></td><td>: <?php echo $rowuser['prog']; ?></td></tr>
 				<tr><td><b>Part</b></td><td>: <?php echo $rowuser['part']; ?></td></tr>
                 <tr><td><b>Date Registered</b></td><td>: <?php echo $rowuser['created']; ?></td></tr>
-                <tr><td><b>Access Level</b></td><td>: <?php echo $rowuser['access_lvl']; ?></td></tr>
-                <script>
-                    var access_lvl = parseInt($rowuser['access_lvl']);
-                    if (access_lvl == 1) document.write("Developers");
-                    if (access_lvl == 2) document.write("Admin");
-                    if (access_lvl == 3) document.write("User");
-                </script>
+                <?php
+                    $query_user = $conn->query("SELECT * FROM user WHERE id ='".$_SESSION['id']."'");
+                    $rowuser = $query_user->fetch_assoc();
+
+                    $query_pos = $conn->query("SELECT * FROM position WHERE id ='".$rowuser['id']."'");
+                    $rowpos = $query_pos->fetch_assoc();
+                ?>
+                <tr><td><b>Access Level</b></td><td>: <?php echo $rowpos['title']; ?></td></tr>
 			</table>
 		</div><br/><br/><br/>
 		<!--STA Display event that this user joined-->
