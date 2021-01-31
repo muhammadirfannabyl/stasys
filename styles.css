@@ -49,12 +49,14 @@ header {
   background-color: #5d00ff;
   padding: 10px;
   text-align: center;
-  color: white;
 }
 footer {
   background-color: #5d00ff;
   padding: 10px;
   text-align: center;
-  color: white;
+  clear: both;
+  position: relative;
+  height: 200px;
+  margin-top: -200px;		
 }
 
