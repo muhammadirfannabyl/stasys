@@ -34,8 +34,9 @@
                 <?php
                     $result = mysqli_query($conn, "SELECT * FROM  position JOIN user on user.access_lvl = position.id");
                     while($rows=mysqli_fetch_array($result)){ ?>
+                        <div class="text"><?php echo $rows['title']; ?></div>
                 <?php } ?>
-                <tr><td><b>Access Level</b></td><td>: <?php echo $rowp['title']; ?></td></tr>
+                <tr><td><b>Access Level</b></td><td>: <?php echo $rows['title']; ?></td></tr>
 			</table>
 		</div><br/><br/><br/>
 		<!--STA Display event that this user joined-->
