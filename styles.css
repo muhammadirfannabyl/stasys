@@ -1,6 +1,6 @@
 *{
-    	background-color: #315973;
-	color: white;
+    	background-color: #314773;
+	color: #00b4f9;
 	box-sizing: border-box;
 	font-family: 'Comic Neue';
 	margin-left: auto;
@@ -32,6 +32,7 @@
 }.box-event:hover{
 	background-color: #e4fef5;
 }.text{
+	color: black;
 	background-color: #FFFFFF00;
 	margin: 15px 50px;
 }.text a input{
