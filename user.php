@@ -30,7 +30,13 @@
 				<tr><td><b>Matrices ID</b></td><td>: <?php echo $rowuser['mat_id']; ?></td></tr>
 				<tr><td><b>Programme</b></td><td>: <?php echo $rowuser['prog']; ?></td></tr>
 				<tr><td><b>Part</b></td><td>: <?php echo $rowuser['part']; ?></td></tr>
-				<tr><td><b>Date Registered</b></td><td>: <?php echo $rowuser['created']; ?></td></tr>
+                <tr><td><b>Date Registered</b></td><td>: <?php echo $rowuser['created']; ?></td></tr>
+                <script>
+                    var access_lvl = parseInt($rowuser['access_lvl']);
+                    if (access_lvl == 1) <tr><tr><td><b>Acess Level</b></td><td>: Developer</td></tr>
+                    if (access_lvl == 2) <tr><tr><td><b>Acess Level</b></td><td>: Admin</td></tr>
+                    if (access_lvl == 3) <tr><tr><td><b>Acess Level</b></td><td>: User</td></tr>
+                </script>
 			</table>
 		</div><br/><br/><br/>
 		<!--STA Display event that this user joined-->
