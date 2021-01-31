@@ -64,7 +64,7 @@
             $stmt->close();
 
             if($insertSQL)
-                echo '<script>alert("SUCCESS: User has been registered successfully."); window.location = "./index.php"; </script>';
+                echo '<script>alert("SUCCESS: User has been registered successfully."); window.location = "../index.php"; </script>';
             else
                 echo '<script>alert("FAIL: User cannot be registered."); window.location = "./register.php"; </script>';
 
@@ -79,18 +79,7 @@
 
 <html>
     <body>
-        <?php 
-        // Display Success message
-        if(!empty($success_message)){
-        ?>
-        <div class="alert alert-success">
-            <strong>Success!</strong> <?= $success_message ?>
-        </div>
-
-        <?php
-        }
-		?>
-
+	
         <h1>STASYS - REGISTER</h1>
 
         <form method='post' action='./register.php'>
