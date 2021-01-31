@@ -22,6 +22,7 @@
 <html>
 	<head>
 		<title>STASYS - Event: <?php echo $rowevent['title']; ?></title>
+		<link href='https://fonts.googleapis.com/css?family=Comic Neue' rel='stylesheet'>
 		<link rel="stylesheet" type="text/css" href="./styles.css"/>
 	</head>
 	<body>

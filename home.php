@@ -15,6 +15,7 @@
 	</head>
 	<body>
 		<!--Navigation bar-->
+		<header></header>
 		<nav class="align-center">
 			<a class="title" href="home.php">STASYS</a>
 			Student Activity System v<?php echo $VERSION; ?>
@@ -27,15 +28,17 @@
 			<h1>Events</h1>
 			<?php $result = mysqli_query($conn, "SELECT * FROM event ORDER BY date_time DESC");
 			while($rows=mysqli_fetch_array($result)){
-			$count = mysqli_fetch_assoc(mysqli_query($conn, "SELECT COUNT(u_id) as count FROM participation WHERE e_id = ".$rows['id']."")); ?>
-	<div class="box-event">
-				<!--b><?php // echo $rows['id']; ?></b><br/><br/-->
-				<div class="text"><b><?php echo $rows['title']; ?></b></div>
-				<div class="text"><?php echo $rows['date_time']; ?></div>
-				<div class="text"><?php echo $count['count'].' participant(s) joined'; ?><a href="event.php?no=<?php echo $rows['id']; ?>"><input type="button" value="View"/></a></div>
-			</div>
-		<?php } ?>
+				if ($rows['status'] == '1')
+				$count = mysqli_fetch_assoc(mysqli_query($conn, "SELECT COUNT(u_id) as count FROM participation WHERE e_id = ".$rows['id']."")); ?>
+				<div class="box-event">
+					<!--b><?php // echo $rows['id']; ?></b><br/><br/-->
+					<div class="text"><b><?php echo $rows['title']; ?></b></div>
+					<div class="text"><?php echo $rows['date_time']; ?></div>
+					<div class="text"><?php echo $count['count'].' participant(s) joined'; ?><a href="event.php?no=<?php echo $rows['id']; ?>"><input type="button" value="View"/></a></div>
+				</div>
+			<?php } ?>
 </div>
 		<script src="https://kit.fontawesome.com/2ba9e2652f.js" crossorigin="anonymous"></script>
+		<footer></footer>
 	</body>
 </html>
