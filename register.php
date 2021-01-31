@@ -19,7 +19,7 @@
 	   // Check fields are empty or not
         if($username == '' || $password == '' || $confirmpassword == '' || $name == '' || $studentid == '' || $program == '' || $part == ''){
             $isValid = false;
-            $error_message = "Please fill all fields.";
+            $error_message = "Please fill all fields."; 
         }
 
         // Check if confirm password matching or not
@@ -77,10 +77,12 @@
     <?php 
         // Display Error message
         if(!empty($error_message)){
-        ?>
-        <div class="alert alert-danger">
-            <strong>Error!</strong> <?= $error_message ?>
-        </div>
+            ?>
+            <div class="alert alert-danger">
+                <?php
+                echo '<script>alert($error_message); window.location = "register.php"; </script>';
+                ?>
+            </div>
 
         <?php
         }
