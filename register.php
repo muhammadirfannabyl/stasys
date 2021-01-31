@@ -72,7 +72,7 @@
     }
     // Display Error message
     if(!empty($error_message)){
-        echo '<script>alert("$error_message"); window.location = "register.php"; </script>';
+        echo '<script>alert('.$error_message.'); window.location = "register.php"; </script>';
 ?>
 
 <html>
