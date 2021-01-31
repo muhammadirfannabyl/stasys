@@ -1,6 +1,6 @@
 *{
-    	background-color: #315973;
-	color: white;
+    	background-color: #314773;
+	color: #00b4f9;
 	box-sizing: border-box;
 	font-family: 'Comic Neue';
 	margin-left: auto;
@@ -10,7 +10,7 @@
 }b{
 	background-color: #FFFFFF00;
 }nav a{
-	color: darkgreen;
+	color: #00af00;
 	margin: 0 20px;
 	text-decoration: none;
 }textarea.static{
@@ -25,13 +25,15 @@
 	margin: 0 auto 0 auto;
 	width: 1200px;
 }.box-event{
-	background-color: lightgray;
+	background-color: #c1bebe;
+	border-radius: 35px 20px;
 	padding: 10px 0;
 	margin: 20px auto;
 	max-width: 960px;
 }.box-event:hover{
 	background-color: #e4fef5;
 }.text{
+	color: black;
 	background-color: #FFFFFF00;
 	margin: 15px 50px;
 }.text a input{
