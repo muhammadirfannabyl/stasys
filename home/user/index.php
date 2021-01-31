@@ -1,25 +1,22 @@
 <?php
-	include("config.php");
-	
-	require_once 'session_check.php';
-	
-	//fetch info for current  user
-	$query_user = $conn->query("SELECT * FROM user WHERE id ='".$_SESSION['id']."'");
-	$rowuser = $query_user->fetch_assoc();
+	include('../../sess/config.php');
+	require_once '../../sess/session_check.php';
+	include('../../sess/current_user.php');
 ?>
 <html>
 	<head>
-		<title>STASYS - Profile</title>
-		<link rel="stylesheet" type="text/css" href="./styles.css"/>
+		<title>STASYS - User</title>
+		<link href='https://fonts.googleapis.com/css?family=Comic Neue' rel='stylesheet'>
+		<link rel="stylesheet" type="text/css" href="../../css/styles.css"/>
 	</head>
 	<body>
 		<!--STA Navigation bar-->
 		<nav class="align-center">
-			<a class="title" href="home.php">STASYS</a>
+			<a class="title" href="../">STASYS</a>
 			Student Activity System v<?php echo $VERSION; ?>
 			<a><i class="fa fa-user-circle-o" aria-hidden="true"></i> <?php echo $rowuser['un']; ?></a>
-			<a href="event_add.php"><i class="fa fa-calendar" aria-hidden="true"></i> Add Event</a>
-			<a href="logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Log Out</a>
+			<a href="../event/option/add.php"><i class="fa fa-calendar" aria-hidden="true"></i> Add Event</a>
+			<a href="../../sess/logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Log Out</a>
 		</nav>
 		<!--END Navigation bar-->
 		<!--Display user information-->
@@ -44,7 +41,7 @@
 			<?php $result = mysqli_query($conn, "SELECT e_id, title, date_time FROM event JOIN participation on event.id=participation.e_id WHERE participation.u_id = '".$rowuser['id']."' ORDER BY date_time DESC");
 			while($rows=mysqli_fetch_array($result)){ ?>
 				<div class="text"><?php echo $rows['title']; ?></div>
-				<div class="text"><?php echo $rows['date_time']; ?><a href="event.php?no=<?php echo $rows['e_id']; ?>"><input type="button" value="View"/></a></div>
+				<div class="text"><?php echo date('h:i A (Hi), d/m/Y', strtotime($rows['date_time'])); ?><a href="../event/?no=<?php echo $rows['e_id']; ?>"><input type="button" value="View"/></a></div>
 			<?php } ?>
 		</div>
 		<!--END Display event that this user joined-->
