@@ -35,7 +35,6 @@
 				    $result2 = mysqli_query($conn, "SELECT * FROM position WHERE id =".$rowuser['access_lvl']."");
 				    $rows2 = $result2->fetch_assoc();
 				?>
-				<div class="text"><?php echo $rows['title']; ?></div>
 				<tr><td><b>Access Level</b></td><td>: <?php echo $rows2['title']; ?></td></tr>
 			</table>
 		</div><br/><br/><br/>

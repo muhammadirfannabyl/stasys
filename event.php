@@ -57,6 +57,8 @@
 					
 					if($rowuser['access_lvl'] < 3 || $rowuser['id'] == $rowevent['u_id'])
 						echo '<a href="event_edit.php?no='.$rowevent['id'].'"><input type="button" value="Edit"/></a>';
+					if($rowuser['access_lvl'] < 3 || $rowuser['id'] == $rowevent['u_id'])
+						echo '<a href="event_post.php?no='.$rowevent['id'].'&option=delete"><input type="button" value="Delete"/></a>';
 				?>
 				</td></tr>
 			</table><br/><br/><br/>
