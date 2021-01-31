@@ -79,7 +79,7 @@
 			echo '<script>alert("SUCCESS: You have joined this event."); window.location = "event.php?no='.$_GET['no'].'"; </script>';
 		// Delete event function definition
 		}elseif($_GET['option'] == "delete"){
-			$result=mysqli_query($conn, "DELETE FROM event WHERE AND e_id=".$_GET['no']."");
+			$result=mysqli_query($conn, "DELETE FROM event WHERE id=".$_GET['no']."");
 			echo '<script>alert("SUCCESS: This event has been deleted."); window.location = "home.php"; </script>';
 		// Join event function definition
 		}
