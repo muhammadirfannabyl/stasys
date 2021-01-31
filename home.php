@@ -15,6 +15,7 @@
 	</head>
 	<body>
 		<!--Navigation bar-->
+		<header></header>
 		<nav class="align-center">
 			<a class="title" href="home.php">STASYS</a>
 			Student Activity System v<?php echo $VERSION; ?>
