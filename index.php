@@ -26,7 +26,7 @@ require_once "config.php";
                 <td></td>
                 <td>
                     <br><button type="submit" name="Submit"><strong>Login</strong></button>
-                    &nbsp;<button type="register" formaction="/register.php"><strong>Register</strong></button>
+                    &nbsp;<button type="register" formaction="/register.php"><p1>Register</p1></button>
                 </td>
             </tr>
         </table></br></br>
