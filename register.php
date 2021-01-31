@@ -79,9 +79,7 @@
         if(!empty($error_message)){
         ?>
         <div class="alert alert-danger">
-            <?php
-                echo '<script>alert($error_message); window.location = "register.php"; </script>';
-            ?>
+            <script>alert($error_message); window.location = "register.php"; </script>
             <!--- <strong>Error!</strong> <?= $error_message ?> --->
         </div>
 
