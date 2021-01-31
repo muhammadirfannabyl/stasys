@@ -50,15 +50,19 @@
 					$query2 = $conn->query("SELECT * FROM participation WHERE u_id=".$_SESSION['id']." and e_id=".$_GET["no"]."");
 					$delevt=$query2->fetch_assoc();
 					
-					if($delevt)
-						echo '<a href="event_post.php?no='.$rowevent['id'].'&option=leave"><input type="button" value="Leave"/></a>';
-					else
-						echo '<a href="event_post.php?no='.$rowevent['id'].'&option=join"><input type="button" value="Join"/></a>';
-					
-					if($rowuser['access_lvl'] < 3 || $rowuser['id'] == $rowevent['u_id'])
-						echo '<a href="event_edit.php?no='.$rowevent['id'].'"><input type="button" value="Edit"/></a>';
-					if($rowuser['access_lvl'] < 3 || $rowuser['id'] == $rowevent['u_id'])
-						echo '<a href="event_post.php?no='.$rowevent['id'].'&option=delete"><input type="button" value="Delete"/></a>';
+					if($rowevent['status']==0)
+						echo '<a href="event_post.php?no='.$rowevent['id'].'&option=approve"><input type="button" value="Approve"/></a>';
+					else{
+						if($delevt)
+							echo '<a href="event_post.php?no='.$rowevent['id'].'&option=leave"><input type="button" value="Leave"/></a>';
+						else
+							echo '<a href="event_post.php?no='.$rowevent['id'].'&option=join"><input type="button" value="Join"/></a>';
+						
+						if($rowuser['access_lvl'] < 3 || $rowuser['id'] == $rowevent['u_id'])
+							echo '<a href="event_edit.php?no='.$rowevent['id'].'"><input type="button" value="Edit"/></a>';
+						if($rowuser['access_lvl'] < 3 || $rowuser['id'] == $rowevent['u_id'])
+							echo '<a href="event_post.php?no='.$rowevent['id'].'&option=delete"><input type="button" value="Delete"/></a>';
+					}
 				?>
 				</td></tr>
 			</table><br/><br/><br/>
