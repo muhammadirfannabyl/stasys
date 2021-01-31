@@ -32,12 +32,11 @@
 				<tr><td><b>Part</b></td><td>: <?php echo $rowuser['part']; ?></td></tr>
                 <tr><td><b>Date Registered</b></td><td>: <?php echo $rowuser['created']; ?></td></tr>
                 <tr><td><b>Access Level</b></td><td>: <?php echo $rowuser['access_lvl']; ?></td></tr>
-                <p id="demo"></p>
                 <script>
                     var access_lvl = parseInt($rowuser['access_lvl']);
-                    if (access_lvl == 1) document.getElementById("demo").innerHTML = "Developers";
-                    if (access_lvl == 2) <tr><tr><td><b>Acess Level</b></td><td>: Admin</td></tr>
-                    if (access_lvl == 3) <tr><tr><td><b>Acess Level</b></td><td>: User</td></tr>
+                    if (access_lvl == 1) document.write("Developers");
+                    if (access_lvl == 2) document.write("Admin");
+                    if (access_lvl == 3) document.write("User");
                 </script>
 			</table>
 		</div><br/><br/><br/>
