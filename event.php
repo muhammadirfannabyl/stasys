@@ -42,7 +42,18 @@
 				<tr><td><b>Quota</b></td><td>: <?php echo $rowevent['quota']; ?></td></tr></td></tr>
 				<tr><td><b>Organizer</b></td><td>: <?php echo $roworg['name']; ?></td></tr></td></tr>
 				<tr><td><b>Description</b></td><td>: <?php echo $rowevent['description']; ?></td></tr></td></tr>
-				<tr><td></td><td><a href="event_join_post.php?no=<?php echo $rowevent['id']; ?>"><input type="button" value="Join"/></a></td></tr>
+				<tr><td></td><td>
+<?php
+	// Check whether user has joined this event
+	$query2 = $conn->query("SELECT * FROM participation WHERE u_id=".$_SESSION['id']." and e_id=".$_GET["no"]."");
+	$delevt=$query2->fetch_assoc();
+	
+	if($delevt)
+		echo '<a href="event_post.php?no='.$rowevent['id'].'&option=leave"><input type="button" value="Leave"/></a>';
+	else
+		echo '<a href="event_post.php?no='.$rowevent['id'].'&option=join"><input type="button" value="Join"/></a>';
+?>				
+				</a></td></tr>
 			</table><br/><br/><br/>
 			<!--List participant who joined this event-->
 			<h1>Participants</h1>
@@ -51,11 +62,11 @@
 			if ($count['count'] > 0){
 				while($rows=mysqli_fetch_array($result)){
 					$participant = mysqli_fetch_assoc(mysqli_query($conn, "SELECT name FROM user WHERE id = ".$rows['u_id']."")); ?>
-				<li><?php echo $participant['name']; ?></li>
-			<?php } ?>
-			</ol><?php
+	<li><?php echo $participant['name']; ?></li>
+			<?php } ?></ol><?php
 			}else
-				echo 'Nobody has joined this event yet. Become the first one to participate!'; ?>
+				echo 'Nobody has joined this event yet. Become the first one to participate!';?>
+		
 		</div>
 		<script src="https://kit.fontawesome.com/2ba9e2652f.js" crossorigin="anonymous"></script>
 	</body>

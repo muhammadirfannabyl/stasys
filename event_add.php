@@ -24,7 +24,7 @@
 		<!--Form to add event-->
 		<div class="box-base">
 			<h1>Add Event</h1>
-			<form method="post" action="event_add_post.php">
+			<form method="post" action="event_post.php">
 				<table>
 					<tr><td>Title</td><td>: <input name="title" type="text" size="38"/></td></tr>
 					<tr><td>Date</td><td>: <input name="date" type="date"/></td><tr>
