@@ -25,7 +25,8 @@
 	margin: 0 auto 0 auto;
 	width: 1200px;
 }.box-event{
-	background-color: lightgray;
+	background-color: #c1bebe;
+	border-radius: 35px 20px;
 	padding: 10px 0;
 	margin: 20px auto;
 	max-width: 960px;
