@@ -1,15 +1,18 @@
 <?php
+	// ./root/home/index.php
 	require_once "../sess/config.php";
 	require_once '../sess/session_check.php';
 	include('../sess/current_user.php');
 ?>
 <!DOCTYPE html>
 <html>
+	<!--START: PAGE HEADER-->
 	<head>
-		<title>STASYS - </title>
+		<title>STASYS - Home</title>
 		<link href="https://fonts.googleapis.com/css?family=Comic Neue" rel='stylesheet'/>
 		<link rel="stylesheet" type="text/css" href="../css/styles-new.css"/>
 	</head>
+	<!--END: PAGE HEADER-->
 	<body>
 		<!--START: NAVBAR-->
 		<nav>

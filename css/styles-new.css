@@ -26,6 +26,12 @@
 }nav a:hover:not(:first-child){
 	background-color: #A0B2D6;
 	color: #314773;
+}table.user{
+	font-size: 18px;
+}table.user th{
+	text-align: left;
+}table.user tr:nth-child(even){
+	background-color: #f2f2f2;
 }.event-bg{
 	background-color: #7D96C7;
 	border-radius: 15px 5px;
@@ -46,6 +52,13 @@
 	background-color: #C9D3E7;
 }.event-bg .txt{
 	padding: 10px 20px;
+}.event-bg .txt2{
+	color: black;
+	display: inline-block;
+	padding: 10px 20px;
+	text-decoration: none;
+}.event-bg .txt2:not(:first-child){
+	float: right;
 }.txt h1{
 	font-size: 26px;
 }.vis{
