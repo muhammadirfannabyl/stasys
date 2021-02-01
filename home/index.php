@@ -33,17 +33,27 @@
 				
 				while($rows=mysqli_fetch_array($result)){
 				    $count = mysqli_fetch_assoc(mysqli_query($conn, "SELECT COUNT(u_id) as count FROM participation WHERE e_id = ".$rows['id'].""));
+					
+					if ($count['count'] == 0)
+						$count_str = "Nobody participated yet";
+					elseif($count['count'] == 1)
+						$count_str = "1 participant joined";
+					else
+						$count_str = $count['count']." participants joined";
+					
 					if ($rows['status'] == 0)
 						$status = "<div style='color: #7f4600;'>Approval Pending";
 					else
 						$status = "<div style='color: darkgreen;'>Approved"; ?>
+			
 			<div class="event-bg">
 				<div class="txt"><h1><?php echo $rows['title']; ?></h1></div>
 				<div class="txt"><?php echo date('h:i A (Hi), d/m/Y', strtotime($rows['date_time'])); ?></div>
-				<div class="txt"><?php echo $count['count'].' participant(s) joined'; ?></div>
+				<div class="txt"><?php echo $count_str; ?></div>
 				<a href="./event/?no=<?php echo $rows['id']; ?>"><div class="button">View</div></a>
 			</div><?php
 				}?>
+			
 			<!--END: LIST AVAILABLE EVENT-->
 		</div>
 		<!--END: BODY-->
