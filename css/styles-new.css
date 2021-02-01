@@ -10,6 +10,9 @@
 	color: aliceblue;
 	display: inline;
 	font-size: 48px;
+}a .event-bg:hover{
+	background-color: #C9D3E7;
+	transition: ease-out 0.33s;
 }nav{
 	background-color: #314773;
 	display: block;
@@ -20,12 +23,14 @@
 	color: #A0B2D6;
 	padding: 50px 10px;
 	text-decoration: none;
+	transition: ease-out 0.33s;
 }nav a:not(:first-child){
 	padding: 22px;
 	float: right;
 }nav a:hover:not(:first-child){
 	background-color: #A0B2D6;
 	color: #314773;
+	transition: ease-in 0.33s;
 }table.user{
 	font-size: 18px;
 }table.user th{
@@ -39,6 +44,7 @@
 	margin: 20px auto;
 	max-width: 960px;
 	padding: 10px;
+	transition: ease-out 0.33s;
 }.event-bg .button, .event-bg .button a{
 	background-color: #A0B2D6;
 	border-radius: 15px 5px;
@@ -48,11 +54,14 @@
 	margin: -122px 0 0 0;
 	padding: 50px;
 	text-decoration: none;
+	transition: ease-out 0.33s;
 }.event-bg .button:hover{
 	background-color: #C9D3E7;
+	transition: ease-in 0.33s;
 }.event-bg .txt{
 	padding: 10px 20px;
 }.event-bg .txt2{
+	background-color: #FFFFFF00;
 	color: black;
 	display: inline-block;
 	padding: 10px 20px;
