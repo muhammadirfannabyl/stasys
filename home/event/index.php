@@ -75,7 +75,10 @@
 					if($hasJoined)
 						echo '<a href="./option/post.php?no='.$rowevent['id'].'&option=leave"><input class="action" type="button" value="Leave"/></a>';
 					else
-						echo '<a href="./option/post.php?no='.$rowevent['id'].'&option=join"><input type="button" value="Join"/></a>';
+						if ($rowevent['status'] == 0)
+							echo '<a><input type="button" value="Join" disabled/></a>';
+						else
+							echo '<a href="./option/post.php?no='.$rowevent['id'].'&option=join"><input type="button" value="Join"/></a>';
 
 					// Checks whether user is admin above or event owner
 					if($rowuser['access_lvl'] < 3 || $rowuser['id'] == $rowevent['u_id'])
@@ -99,7 +102,10 @@
 			
 				</ol><?php 
 					}else
-						echo 'Nobody has joined this event yet. Become the first one to participate!'; ?>
+						if ($rowevent['status'] == 0)
+							echo 'Nobody can join this event yet. It must be approved by system administrator in order to participate.';
+						else
+							echo 'Nobody has joined this event yet. Become the first one to participate!'; ?>
 			<!--END: PARTICIPANT LIST-->
 			</div>
 		</div>
