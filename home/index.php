@@ -34,13 +34,24 @@
 				while($rows=mysqli_fetch_array($result)){
 				    $count = mysqli_fetch_assoc(mysqli_query($conn, "SELECT COUNT(u_id) as count FROM participation WHERE e_id = ".$rows['id'].""));
 					
-					if ($count['count'] == 0)
-						$count_str = "Nobody participated yet";
-					elseif($count['count'] == 1)
-						$count_str = "1 participant joined";
-					else
-						$count_str = $count['count']." participants joined";
+					$participant = mysqli_query($conn, "SELECT * FROM participation WHERE u_id = ".$rowuser['id']." AND e_id = ".$rows['id']."");
 					
+					if(mysqli_num_rows($participant) > 0){
+						if($count['count'] == 1)
+							$count_str = "You joined.";
+						elseif(mysqli_num_rows($participant) > 0 && $count['count'] == 2)
+							$count_str = "You and ".($count['count']-1)." other participant joined.";
+						else
+							$count_str = "You and ".($count['count']-1)." other participans joined.";
+					}else{
+						if ($count['count'] == 0)
+							$count_str = "Nobody participated yet";
+						elseif($count['count'] == 1)
+							$count_str = "1 participant joined";
+						else
+							$count_str = $count['count']." participants joined";
+					}
+						
 					if ($rows['status'] == 0)
 						$status = "<div style='color: #7f4600;'>Approval Pending <i class='fa fa-exclamation' aria-hidden='true'></i></div>";
 					else

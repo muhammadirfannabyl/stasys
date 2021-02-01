@@ -94,7 +94,7 @@
 					<?php $result = mysqli_query($conn, "SELECT * FROM participation WHERE e_id = ".$rowevent['id']."");
 					if ($count['count'] > 0){
 						while($rows=mysqli_fetch_array($result)){
-							$participant = mysqli_fetch_assoc(mysqli_query($conn, "SELECT name FROM user WHERE id = ".$rows['u_id']."")); ?><li><?php echo $participant['name']; ?></li>
+							$participant = mysqli_fetch_array(mysqli_query($conn, "SELECT name FROM user WHERE id = ".$rows['u_id']."")); ?><li><?php echo $participant['name']; ?></li>
 					<?php } ?>
 			
 				</ol><?php 
