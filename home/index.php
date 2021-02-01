@@ -42,7 +42,7 @@
 						elseif(mysqli_num_rows($participant) > 0 && $count['count'] == 2)
 							$count_str = "You and ".($count['count']-1)." other participant joined.";
 						else
-							$count_str = "You and ".($count['count']-1)." other participans joined.";
+							$count_str = "You and ".($count['count']-1)." other participants joined.";
 					}else{
 						if ($count['count'] == 0)
 							$count_str = "Nobody participated yet";
