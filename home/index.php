@@ -19,7 +19,7 @@
 			<a class="home" href="./"><h1>STASYS</h1> Student Activity System v <?php echo $VERSION; ?></a>
 			<a href="../sess/logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Log Out</a>
 				<a href="./event/option/add.php"><i class="fa fa-calendar" aria-hidden="true"></i> Add Event</a>
-			<a href="./user/"><i class="fa fa-user-circle-o" aria-hidden="true"></i> <?php echo $rowuser['un']; ?>user_name</a>
+			<a href="./user/"><i class="fa fa-user-circle-o" aria-hidden="true"></i> <?php echo $rowuser['un']; ?></a>
 		</nav>
 		<!--END: NAVBAR-->
 		<!--START: BODY-->
