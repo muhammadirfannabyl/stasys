@@ -21,7 +21,7 @@
 	<body>
 		<!--Navigation bar-->
 		<nav class="align-center">
-			<a class="title" href="../../">STASYS</a>
+			<a class="home" class="title" href="../../">STASYS</a>
 			Student Activity System v<?php echo $VERSION; ?>
 			<a href="../../../user/"><i class="fa fa-user-circle-o" aria-hidden="true"></i> <?php echo $rowuser['un']; ?></a>
 			<a href="./add.php"><i class="fa fa-calendar" aria-hidden="true"></i> Add Event</a>
