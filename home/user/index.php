@@ -67,6 +67,17 @@
 			</div></a><?php
 			} ?>
 			<!--END: List joined event -->
+			<!--START: LIST CREATED EVENT-->
+			<center><h1><strong>Organised Event</strong></h1></center>
+			<?php $q2 = mysqli_query($conn, "SELECT id, title, date_time FROM event WHERE u_id = ".$rowuser['id']." ORDER BY date_time DESC");
+			while($event=mysqli_fetch_array($q2)){ ?>
+			<a href="../event/?no=<?php echo $event['id']; ?>">
+			<div class="event-bg">
+				<div class="txt2"><strong><?php echo $event['title']; ?></strong></div>
+				<div class="txt2"><?php echo date('h:i A (Hi), d/m/Y', strtotime($event['date_time'])); ?></div>
+			</div></a><?php
+			} ?>
+			<!--END: LIST CREATED EVENT-->
 		</div>
 		<script src="https://kit.fontawesome.com/2ba9e2652f.js" crossorigin="anonymous"></script>
 	</body>
