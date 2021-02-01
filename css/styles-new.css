@@ -1,6 +1,7 @@
 *{
 	background-color: #FFFFFF00;
 	font-family: 'Comic Neue';
+	font-size: 18px;
 	margin: 0;
 	padding: 0;
 }b, h1, h2{
@@ -16,6 +17,9 @@
 }center h1 strong{
 	display: block;
 	padding: 50px 0 10px 0;
+	font-size: 28px;
+}form div.action{
+	margin-top: 100px;
 }nav{
 	background-color: #314773;
 	display: block;
@@ -87,6 +91,31 @@
 	text-decoration: none;
 }.event-bg .txt2:not(:first-child){
 	float: right;
+}.input-group{
+	min-width: 50%;
+	margin: 30px 0 0 0px;
+}.input-group label{
+	font-weight: bold;
+}.input-group input{
+	background: transparent;
+	border: 0;
+	border-bottom: 1px solid black;
+	outline: 0;
+}.input-group input[name=title],
+.input-group input[name=info]{
+	width: 100%;
+}
+.input-group input[name=date],
+.input-group input[name=time],
+.input-group input[name=place],
+.input-group input[name=quota]{
+	min-width: 220px;
+}.half{
+	float: left;
+	min-width: 50%;
+	height: 80px;
+}.input-group textarea{
+	padding: 12px;
 }.txt h1{
 	font-size: 26px;
 }.vis{
@@ -96,5 +125,8 @@
 }.wrapper > ol{
 	font-size: 18px;
 	max-width: 360px;
+	margin: auto;
+}.wrapper form{
+	max-width: 960px;
 	margin: auto;
 }

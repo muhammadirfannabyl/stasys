@@ -1,4 +1,5 @@
 <?php
+	// ./root/home/event/option/add.php
 	include("../../../sess/config.php");
 	require_once '../../../sess/session_check.php';
 	require_once '../../../sess/current_user.php';
@@ -20,21 +21,43 @@
 			<a href="../../user/"><i class="fa fa-user-circle-o" aria-hidden="true"></i> <?php echo $rowuser['un']; ?></a>
 		</nav>
 		<!--END: NAVBAR-->
-		<!--Form to add event-->
-		<div class="box-base">
-			<h1>Add Event</h1>
-			<form method="post" action="./post.php">
-				<table>
-					<tr><td>Title</td><td>: <input name="title" type="text" size="38" required/></td></tr>
-					<tr><td>Date</td><td>: <input name="date" type="date" required/></td><tr>
-					<tr><td>Time</td><td>: <input name="time" type="time" required/></td><tr>
-					<tr><td>Place</td><td>: <input name="place" type="text" required/></td><tr>
-					<tr><td>Quota</td><td>: <input name="quota" type="text" size="5" required/></td></tr><tr></tr>
-					<tr><td>Description</td><td>: <textarea name="info" class="static" rows="8" cols="40" required></textarea></td></tr>
-					<tr><td></td><td><button name="addevent" type="submit">Submit</button><a href="../../" required><input type="button" value="Cancel"/></a></td></tr>
-				</table>
-			</form>
-		</nav>
+		<div class="wrapper">
+			<center><h1><strong>Add Event</strong></h1></center>
+			<!--START: ADD EVENT FORM-->
+				<form method="post" action="./post.php">
+					<div class="input-group">
+						<label>Title</label><br/>
+						<input name="title" type="text" placeholder="Enter event title..." required/>
+					</div>
+					<div class="input-group">
+						<div class="half">
+							<label>Date</label><br/>
+							<input name="date" type="date" required/>
+						</div>
+						<div class="half">
+							<label>Time</label><br/>
+							<input name="time" type="time" required/>
+						</div><br/><br/>
+						<div class="half">
+							<label>Place</label><br/>
+							<input name="place" type="text" placeholder="Enter event location..." required/>
+						</div>
+						<div class="half">
+							<label>Quota</label><br/>
+							<input name="quota" type="text" placeholder="Enter event quota..." required/>
+						</div>
+					</div>
+					<div class="input-group">
+						<label>Description</label><br/>
+						<input name="info" type="text" placeholder="Enter event description..." required/>
+					</div>
+
+					<div class="action">
+						<a href=""><button name="addevent" type="submit">&nbsp;&nbsp;Submit&nbsp;&nbsp;</button></a><a href="../../" required><input type="button" value="Cancel"/></a>
+					</div>
+				</form>
+			<!--END: EVENT INFORMATION-->
+		</div>
 		<script src="https://kit.fontawesome.com/2ba9e2652f.js" crossorigin="anonymous"></script>
 	</body>
 </html>
