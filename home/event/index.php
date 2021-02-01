@@ -19,7 +19,7 @@
 <html>
 	<!--START: PAGE HEADER-->
 	<head>
-		<title>STASYS - User</title>
+		<title>STASYS - Event</title>
 		<link href="https://fonts.googleapis.com/css?family=Comic Neue" rel='stylesheet'/>
 		<link rel="stylesheet" type="text/css" href="../../css/styles-new.css"/>
 	</head>

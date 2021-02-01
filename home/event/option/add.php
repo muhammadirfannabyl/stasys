@@ -4,20 +4,22 @@
 	require_once '../../../sess/current_user.php';
 ?>
 <html>
+	<!--START: PAGE HEADER-->
 	<head>
-		<title>STASYS - Add Event</title>
-		<link href='https://fonts.googleapis.com/css?family=Comic Neue' rel='stylesheet'>
-		<link rel="stylesheet" type="text/css" href="../../../css/styles.css"/>
+		<title>STASYS - Event</title>
+		<link href="https://fonts.googleapis.com/css?family=Comic Neue" rel='stylesheet'/>
+		<link rel="stylesheet" type="text/css" href="../../../css/styles-new.css"/>
 	</head>
+	<!--END: PAGE HEADER-->
 	<body>
-		<!--Navigation bar-->
-		<nav class="align-center">
-			<a class="title" href="../../">STASYS</a>
-			Student Activity System v0.2
-			<a href="../../user/"><i class="fa fa-user-circle-o" aria-hidden="true"></i> <?php echo $rowuser['un']; ?></a>
-			<a><i class="fa fa-calendar" aria-hidden="true"></i> Add Event</a>
+		<!--START: NAVBAR-->
+		<nav>
+			<a href="../../"><h1>STASYS</h1> Student Activity System v <?php echo $VERSION; ?></a>
 			<a href="../../../sess/logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Log Out</a>
+				<a><i class="fa fa-calendar" aria-hidden="true"></i> Add Event</a>
+			<a href="../../user/"><i class="fa fa-user-circle-o" aria-hidden="true"></i> <?php echo $rowuser['un']; ?></a>
 		</nav>
+		<!--END: NAVBAR-->
 		<!--Form to add event-->
 		<div class="box-base">
 			<h1>Add Event</h1>
