@@ -99,7 +99,10 @@
 						$result = mysqli_query($conn, "SELECT * FROM participation WHERE e_id = ".$rowevent['id']."");
 						if ($count['count'] > 0){
 							while($rows=mysqli_fetch_array($result)){
-								$participant = mysqli_fetch_array(mysqli_query($conn, "SELECT name FROM user WHERE id = ".$rows['u_id']."")); ?><li><?php echo $participant['name'];?></li><?php
+								$participant = mysqli_fetch_array(mysqli_query($conn, "SELECT name FROM user WHERE id = ".$rows['u_id'].""));
+								echo '<li>'.$participant['name'].'</li>';
+							}
+							echo '</ol>';
 						}else
 							echo 'Nobody has joined this event yet. Become the first one to participate!'; ?>
 			<!--END: PARTICIPANT LIST-->
