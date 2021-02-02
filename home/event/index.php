@@ -92,19 +92,15 @@
 			<!--END: EVENT BUTTON-->
 			<!--START: PARTICIPANT LIST-->
 			<div class="wrapper">
-				<center><h1><strong>Participant List</strong></h1></center>
-				<ol>
-					<?php $result = mysqli_query($conn, "SELECT * FROM participation WHERE e_id = ".$rowevent['id']."");
-					if ($count['count'] > 0){
-						while($rows=mysqli_fetch_array($result)){
-							$participant = mysqli_fetch_array(mysqli_query($conn, "SELECT name FROM user WHERE id = ".$rows['u_id']."")); ?><li><?php echo $participant['name']; ?></li>
-					<?php } ?>
-			
-				</ol><?php 
-					}else
-						if ($rowevent['status'] == 0)
+				<center><h1><strong>Participant List</strong></h1></center><?php
+					if ($rowevent['status'] == 0){
 							echo 'Nobody can join this event yet. It must be approved by system administrator in order to participate.';
-						else
+					}else{ ?><ol><?php
+						$result = mysqli_query($conn, "SELECT * FROM participation WHERE e_id = ".$rowevent['id']."");
+						if ($count['count'] > 0){
+							while($rows=mysqli_fetch_array($result)){
+								$participant = mysqli_fetch_array(mysqli_query($conn, "SELECT name FROM user WHERE id = ".$rows['u_id']."")); ?><li><?php echo $participant['name']; }?></li><?php
+						}else
 							echo 'Nobody has joined this event yet. Become the first one to participate!'; ?>
 			<!--END: PARTICIPANT LIST-->
 			</div>
