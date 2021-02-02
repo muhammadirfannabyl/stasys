@@ -53,7 +53,7 @@
 					</div>
 
 					<div class="action">
-						<a href=""><button name="addevent" type="submit">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Submit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button></a><a href="../../" required><input type="button" value="Cancel"/></a>
+						<a href=""><button name="addevent" type="submit">Submit</button></a><a href="../../" required><input type="button" value="Cancel"/></a>
 					</div>
 				</form>
 			<!--END: EVENT INFORMATION-->
