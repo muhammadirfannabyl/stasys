@@ -92,19 +92,21 @@
 			<!--END: EVENT BUTTON-->
 			<!--START: PARTICIPANT LIST-->
 			<div class="wrapper">
-				<center><h1><strong>Participant List</strong></h1></center><?php
+				<center><h1><strong>Participant List</strong></h1></center>
+				<ol><?php
 					if ($rowevent['status'] == 0){
-							echo 'Nobody can join this event yet. It must be approved by system administrator in order to participate.';
-					}else{ ?><ol><?php
+						echo 'Nobody can join this event yet. It must be approved by system administrator in order to participate.</ol>';
+					}else{
 						$result = mysqli_query($conn, "SELECT * FROM participation WHERE e_id = ".$rowevent['id']."");
 						if ($count['count'] > 0){
 							while($rows=mysqli_fetch_array($result)){
 								$participant = mysqli_fetch_array(mysqli_query($conn, "SELECT name FROM user WHERE id = ".$rows['u_id'].""));
 								echo '<li>'.$participant['name'].'</li>';
 							}
-							echo '</ol>';
+							?></ol><?php
 						}else
-							echo 'Nobody has joined this event yet. Become the first one to participate!'; ?>
+							echo 'Nobody has joined this event yet. Become the first one to participate!</ol>';
+					} ?>
 			<!--END: PARTICIPANT LIST-->
 			</div>
 		</div>
