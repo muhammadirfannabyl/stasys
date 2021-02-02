@@ -78,7 +78,6 @@
 			mysqli_query($conn, "DELETE FROM event WHERE id=".$_GET['no']."");
 			mysqli_query($conn, "DELETE FROM participation WHERE e_id=".$_GET['no']."");
 			echo '<script>alert("SUCCESS: This event has been deleted."); window.location = "../../"; </script>';
-		// Join event function definition
 		}
 	else
 		echo '<script>alert("FAIL: Request cannot be accepted."); window.location = "../?no='.$_GET['no'].'"; </script>';
