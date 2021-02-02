@@ -2,9 +2,9 @@
 	include("../../../sess/config.php");
 	require_once '../../../sess/session_check.php';
 	require_once '../../../sess/current_user.php';
-	
+
 	// Add event function definition
-	if(isset($_POST['addevent'])){
+	if(isset($_POST['addevent']) || isset($_POST['editevent'])){
 		$title=$_POST['title'];
 		$info=$_POST['info'];
 		$date=$_POST['date'];
@@ -13,32 +13,25 @@
 		$quota=$_POST['quota'];
 		$date_time=date('Y-m-d H:i:s', strtotime("$date $time"));
 		
-		// Insert value into database
-		$result=mysqli_query($conn,"INSERT INTO event (title, description, date_time, location, quota, u_id) VALUES ('{$title}', '{$info}', '{$date_time}', '{$location}', '{$quota}', '".$_SESSION['id']."')");
-		if($result){
-			$nid = mysqli_fetch_assoc(mysqli_query($conn, "SELECT MAX(id) as id FROM event"));
-			echo '<script>alert("SUCCESS: Event has been added successfully."); window.location = "../?no='.$nid['id'].'"; </script>';
+		if (isset($_POST['addevent'])){
+			// Insert value into database
+			$result=mysqli_query($conn,"INSERT INTO event (title, description, date_time, location, quota, u_id) VALUES ('{$title}', '{$info}', '{$date_time}', '{$location}', '{$quota}', '".$_SESSION['id']."')");
+			if($result){
+				$nid = mysqli_fetch_assoc(mysqli_query($conn, "SELECT MAX(id) as id FROM event"));
+				echo '<script>alert("SUCCESS: Event has been added successfully."); window.location = "../?no='.$nid['id'].'"; </script>';
+			}
+			else
+				echo '<script>alert("FAIL: Event cannot be added."); window.location = "../?no='.$_GET['no'].'"; </script>';
+		}else{
+			// Insert value into database
+			$result=mysqli_query($conn, "UPDATE event SET title='{$title}', description='{$info}', date_time='{$date_time}', location='{$location}', quota='{$quota}' WHERE id ='{$no}'");
+			if($result){
+				echo '<script>alert("SUCCESS: Event has been edited successfully."); window.location = "../?no='.$_POST['no'].'"; </script>';
+			}
+			else
+				echo '<script>alert("FAIL: Event cannot be edited."); window.location = "../?no='.$_POST['no'].'"; </script>';
 		}
-		else
-			echo '<script>alert("FAIL: Event cannot be added."); window.location = "../?no='.$_GET['no'].'"; </script>';
 	// Edit event function definition
-	}elseif(isset($_POST['editevent'])){
-		$no=$_POST['no'];
-		$title=$_POST['title'];
-		$info=$_POST['info'];
-		$date=$_POST['date'];
-		$time=$_POST['time'];
-		$location=$_POST['place'];
-		$quota=$_POST['quota'];
-		$date_time=date('Y-m-d H:i:s', strtotime("$date $time"));
-		
-		// Insert value into database
-		$result=mysqli_query($conn, "UPDATE event SET title='{$title}', description='{$info}', date_time='{$date_time}', location='{$location}', quota='{$quota}' WHERE id ='{$no}'");
-		if($result){
-			echo '<script>alert("SUCCESS: Event has been edited successfully."); window.location = "../?no='.$_POST['no'].'"; </script>';
-		}
-		else
-			echo '<script>alert("FAIL: Event cannot be edited."); window.location = "../?no='.$_POST['no'].'"; </script>';
 	}elseif(isset($_GET['option']))
 		// Approve event function definition
 		if($_GET['option'] == "approve"){
