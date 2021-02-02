@@ -24,7 +24,7 @@
 				echo '<script>alert("FAIL: Event cannot be added."); window.location = "../?no='.$_GET['no'].'"; </script>';
 		}else{
 			// Insert value into database
-			$result=mysqli_query($conn, "UPDATE event SET title='{$title}', description='{$info}', date_time='{$date_time}', location='{$location}', quota='{$quota}' WHERE id ='{$no}'");
+			$result=mysqli_query($conn, "UPDATE event SET title='{$title}', description='{$info}', date_time='{$date_time}', location='{$location}', quota={$quota} WHERE id =".$_POST['no']."");
 			if($result){
 				echo '<script>alert("SUCCESS: Event has been edited successfully."); window.location = "../?no='.$_POST['no'].'"; </script>';
 			}
