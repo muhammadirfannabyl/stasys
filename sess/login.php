@@ -15,7 +15,7 @@
 		//check if user exists
 		if($query->num_rows > 0){
 			$_SESSION['id'] = $row['id'];
-			header('location: ../home/');
+			echo '<script> alert("You have successfully log in. You will be redirected to the home page."); window.location = "../home/"; </script>';
 		}
 		else
 			echo '<script> alert("Incorrect username or password! Please try again."); window.location = "../index.php"; </script>';
