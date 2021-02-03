@@ -16,17 +16,21 @@
 }a .event-bg:hover{
 	background-color: #C9D3E7;
 	transition: ease-out 0.33s;
+}body{
+	position: relative;
+	min-height: 100vh;
 }center h1 strong{
 	display: block;
 	padding: 50px 0 10px 0;
 	font-size: 28px;
 }footer{
 	background-color: #314773;
-	bottom: 0;
 	color: #C9D3E7;
+	margin-top: 50px;
 	padding: 10px 0;
 	position: absolute;
 	text-align: center;
+	height: 45px;
 	width: 100%;
 }form div.action{
 	margin-top: 100px;
@@ -143,6 +147,7 @@
 }.wrapper form{
 	max-width: 960px;
 	margin: auto;
+	padding-bottom: 50px;
 }@media only screen and (max-width: 810px) {
 	nav a{
 		padding: 0 0 30px 0;
