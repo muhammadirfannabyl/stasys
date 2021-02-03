@@ -123,7 +123,7 @@
                 <td></td>
                 <td>
                     <br><button type="submit" name="btnsignup" class="btn btn-default">Submit</button>
-                    &nbsp;<a href="index.php"><input type="button" value="Cancel"/></a>
+                    &nbsp;<a href="../"><input type="button" value="Cancel"/></a>
                 </td>
             </tr>
             
