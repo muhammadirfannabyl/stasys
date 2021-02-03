@@ -117,9 +117,16 @@
 	border-bottom: 1px solid black;
 	outline: 0;
 }.input-group input[name=title],
-.input-group input[name=info]{
+.input-group input[name=info],
+.input-group input[name=username],
+.input-group input[name=name],
+.input-group input[name=studentid]{
 	width: 100%;
 }
+.input-group input[name=password],
+.input-group input[name=confirmpassword],
+.input-group input[name=program],
+.input-group input[name=part],
 .input-group input[name=date],
 .input-group input[name=time],
 .input-group input[name=place],

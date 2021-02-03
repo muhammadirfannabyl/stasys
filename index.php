@@ -25,13 +25,13 @@
 						<div class="half">
 							<div class="wrapper">
 								<label>User ID</label><br/>
-								<input name="username" type="text" placeholder="Enter user ID..."/>
+								<input name="username1" type="text" placeholder="Enter user ID..."/>
 							</div>
 						</div>
 						<div class="half">
 							<div class="wrapper">
 								<label>Password</label><br/>
-								<input name="password" type="password" placeholder="Enter password..."/>
+								<input name="password1" type="password" placeholder="Enter password..."/>
 							</div>
 						</div><br/><br/>
 					</div>

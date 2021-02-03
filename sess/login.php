@@ -4,8 +4,8 @@
 
 	if(isset($_POST['login']))	{
 		//post user id and password
-		$un = mysqli_real_escape_string($conn, $_POST['username']);
-		$pw = mysqli_real_escape_string($conn, $_POST['password']);
+		$un = mysqli_real_escape_string($conn, $_POST['username1']);
+		$pw = mysqli_real_escape_string($conn, $_POST['password1']);
 
 		//query to find user
 		$sql = "SELECT * FROM user WHERE un = '$un' AND pw = '$pw'";
