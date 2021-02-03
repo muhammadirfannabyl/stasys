@@ -43,4 +43,5 @@
 		</div>
 		<script src="https://kit.fontawesome.com/2ba9e2652f.js" crossorigin="anonymous"></script>
 	</body>
+	<?php include './sess/footer.php';?>
 </html>
