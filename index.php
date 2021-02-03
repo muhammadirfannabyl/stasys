@@ -14,7 +14,7 @@
 	<body>
 		<!--START: NAVBAR-->
 		<nav>
-			<a class="home" href="./"><h1>STASYS</h1> Student Activity System v <?php echo $VERSION; ?></a>
+			<center><a class="home" href="./"><h1>STASYS</h1> Student Activity System v <?php echo $VERSION; ?></a></center>
 		</nav>
 		<!--END: NAVBAR-->
 		<div class="wrapper">
