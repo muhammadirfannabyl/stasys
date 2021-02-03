@@ -113,12 +113,15 @@
 .input-group input[name=place],
 .input-group input[name=quota]{
 	min-width: 220px;
+}.input-group textarea{
+	padding: 12px;
 }.half{
 	float: left;
 	min-width: 50%;
 	height: 80px;
-}.input-group textarea{
-	padding: 12px;
+}.half .wrapper{
+	margin: auto;
+	width: 50%;
 }.txt h1{
 	font-size: 26px;
 }.vis{
